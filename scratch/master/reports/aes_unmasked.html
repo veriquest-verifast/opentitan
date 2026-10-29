@@ -1,0 +1,235 @@
+<!--
+# Copyright lowRISC contributors (OpenTitan project).
+# Licensed under the Apache License, Version 2.0, see LICENSE for details.
+# SPDX-License-Identifier: Apache-2.0
+
+-->
+<!--
+# Copyright lowRISC contributors (OpenTitan project).
+# Licensed under the Apache License, Version 2.0, see LICENSE for details.
+# SPDX-License-Identifier: Apache-2.0
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simulation Results</title>
+        <script src="js/htmx.min.js"></script>
+        <script>
+            htmx.config.selfRequestsOnly = false;
+        </script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                
+                <a class="navbar-brand" href="/">Nightly Reports</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        
+<div class="container-md">
+    <div class="row">
+        <div class="col">
+            
+        </div>
+    </div>
+
+    <div class="row py-3">
+        <div class="col">
+            <h2>Simulation Results: aes/unmasked</h2>
+        </div>
+    </div>
+
+    <div class="row justify-content-between">
+        <div class="col-4 col-md-3">
+            <div class="text-center mb-2">&nbsp;</div>
+            <span class="badge text-bg-secondary">
+                29/10/2026 09:13:02
+            </span>
+            
+            <a class="badge text-bg-secondary link-underline link-underline-opacity-0"
+                href="https://github.com/lowRISC/dvsim/releases/tag/v1.52.0">
+                DVSim: v1.52.0
+            </a>
+            
+            <a class="badge text-bg-secondary link-underline link-underline-opacity-0"
+               href="https://github.com/veriquest-verifast/opentitan/tree/27b0b11edc25ac6ba2f2a387edd5e2bd9759b41e">
+                sha: 27b0b11edc
+            </a>
+            <a class="badge text-bg-secondary link-underline link-underline-opacity-0"
+                        href="aes_unmasked.json">json</a>
+            <span class="badge text-bg-secondary">Branch: master</span>
+            <span class="badge text-bg-secondary">
+                Tool: questa [2025.2]
+            </span>
+            
+        </div>
+
+
+
+
+        
+
+        <div class="col-4 col-md-3">
+            <div class="text-center mb-2">Validation stages</div>
+            <div class="card">
+                <table class="table table-sm table-borderless table-hover m-0 small">
+                    <tbody>
+                        
+                        <tr>
+                            <td class="c0">
+                                V2
+                            </td>
+                            <td class="w-100">
+                                <div class="progress" role="progressbar"
+                                     aria-valuenow="0"
+                                     aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar"
+                                         style="width: 0.0%"></div>
+                                </div>
+                            </td>
+                            <td>0.00%</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="row py-3">
+        <div class="col">
+            <div class="accordion accordion-flush" id="accordionStages">
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <button class="accordion-button w-100" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse1"
+                                aria-expanded="true"
+                                aria-controls="collapse1">
+                            <div class="w-100 text-start">V2</div>
+                            <div class="w-100 text-center">
+                                0/1 passed
+                            </div>
+                            <div class="w-100 text-end me-3">
+                                0.00 %
+                            </div>
+                        </button>
+                    </div>
+                    <div id="collapse1"
+                         class="accordion-collapse collapse show">
+                        <div class="accordion-body table-responsive p-0">
+                            <table class="table table-sm table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Testpoint</th>
+                                        <th>Test</th>
+                                        <th>Max Runtime</th>
+                                        <th>Sim Time</th>
+                                        <th>Pass</th>
+                                        <th>Total</th>
+                                        <th>%</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr class="table-secondary">
+                                        <td colspan="4">nist_test_vectors</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0.00</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td></td>
+                                        <td>aes_nist_vectors</td>
+                                        <td>83.468s</td>
+                                        <td>10006.700us</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        
+                                        <td class="c0">
+                                            0.00
+                                        </td>
+                                        
+                                    </tr>
+                                    
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div class="row py-3">
+        <div class="col">
+            <h3>Error Messages</h3>
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th>&nbsp;&nbsp;</th>
+                        <th>Test</th>
+                        <th>seed</th>
+                        <th>line</th>
+                        <th>log context</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr class="table-primary">
+                        <td colspan=4>UVM_FATAL (csr_utils_pkg.sv:619) [csr_utils_pkg.csr_spinwait.isolation_fork] timeout aes_reg_block_extended.status.output_valid (addr=*, Comparison=CompareOpEq, exp_data=*, call_count=5)</td>
+                        <td><b>1 test run</b></td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row"></th>
+                        <td>aes_nist_vectors</td>
+                        <td>1</td>
+                        <td>325</td>
+                        <td>
+                        
+                            <div>UVM_INFO @ 10006699745 ps: (uvm_report_catcher.svh:705) [UVM/REPORT/CATCHER] 
+</div>
+                        
+                            <div>--- UVM Report catcher Summary ---
+</div>
+                        
+                            <div>
+</div>
+                        
+                            <div>
+</div>
+                        
+                        </td>
+                    </tr>
+                    
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

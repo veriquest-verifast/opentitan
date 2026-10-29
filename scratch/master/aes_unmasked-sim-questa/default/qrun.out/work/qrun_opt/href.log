@@ -1,0 +1,81 @@
+BEGIN 1:prim_sparse_fsm_flop:fast:work
+    unused_err_o :  1:aes:fast:work
+END 
+BEGIN 1:prim_sparse_fsm_flop:fast__2:work
+    state_o :  1:aes_control_fsm:fast:work
+    unused_err_o :  1:aes:fast:work
+    unused_assert_connected :  1:aes:fast:work
+    #anonblk#164572064#48#4#.t :  1:prim_sparse_fsm_flop:fast__2:work
+END 
+BEGIN 1:prim_lfsr:fast:work
+    lfsr_q :  1:aes:fast:work
+END 
+BEGIN 3:key_sideload_if:fast__2:work
+    sideload_key :  3:key_sideload_if:fast__2:work 1:tb:fast:work
+END 
+BEGIN 1:prim_sparse_fsm_flop:fast:work
+    state_o :  1:aes_ctr_fsm:fast:work
+    unused_err_o :  1:aes:fast:work
+    unused_assert_connected :  1:aes:fast:work
+    #anonblk#164572064#48#4#.t :  1:prim_sparse_fsm_flop:fast:work
+END 
+BEGIN 1:prim_diff_decode:fast:work
+    gen_async.diff_pd :  1:prim_diff_decode:fast:work
+    gen_async.diff_nd :  1:prim_diff_decode:fast:work
+END 
+BEGIN 1:prim_onehot_check:fast:work
+    err_o :  1:aes:fast:work
+    unused_assert_connected :  1:aes:fast:work
+END 
+BEGIN 3:alert_if:fast__2:work
+    alert_tx :  1:tb:fast:work
+    alert_rx :  1:tb:fast:work
+END 
+BEGIN 1:prim_sparse_fsm_flop:fast__1:work
+    unused_err_o :  1:aes:fast:work
+    unused_assert_connected :  1:aes:fast:work
+    state_o :  1:aes_cipher_control_fsm:fast:work
+    #anonblk#164572064#48#4#.t :  1:prim_sparse_fsm_flop:fast__1:work
+END 
+BEGIN 1:prim_sparse_fsm_flop:fast:work
+    unused_err_o :  1:aes:fast:work
+END 
+BEGIN 3:tl_if:fast__2:work
+    h2d :  1:tb:fast:work
+    d2h :  1:tb:fast:work
+END 
+BEGIN 1:aes_control_fsm:fast:work
+    key_init_new_pulse :  1:aes:fast:work
+    aes_ctrl_cs :  1:aes_core:fast:work
+END 
+BEGIN 1:aes_cipher_control:fast:work
+    rnd_ctr :  1:aes_cipher_core:fast:work
+END 
+BEGIN 1:aes_prng_clearing:fast:work
+    gen_buffer.buffer_q :  1:aes:fast:work
+    seed_en :  1:aes:fast:work
+END 
+BEGIN 3:alert_if:fast:work
+    alert_rx :  1:tb:fast:work
+END 
+BEGIN 3:push_pull_if:fast__2:work
+    d_data :  1:tb:fast:work
+    ack :  1:tb:fast:work
+    req :  1:tb:fast:work
+END 
+BEGIN 1:prim_sparse_fsm_flop:fast:work
+    state_o :  1:aes_control_fsm:fast__1:work
+    unused_err_o :  1:aes:fast:work
+END 
+BEGIN 1:aes_core:fast:work
+    key_touch_forces_reseed :  1:aes:fast:work
+    alert_fatal_o :  1:aes:fast:work
+END 
+BEGIN 3:cip_lc_tx_cov_if:fast__1:work
+    cov :  3:cip_lc_tx_cov_if:fast__1:work
+END 
+BEGIN_PACKAGE
+BEGIN sec_cm_pkg:work
+    en_sec_cm_cov :  3:prim_onehot_check_if:fast__1:work 3:prim_onehot_check_if:synth:work
+END 
+END_PACKAGE

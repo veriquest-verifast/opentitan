@@ -1,0 +1,5 @@
+files_root: /home/kthakkar/opentitan_new/opentitan/hw/ip/aes/dv/sva
+gapi: '1.0'
+parameters:
+  spec: ../../data/aes.hjson
+vlnv: lowrisc:dv:aes_sva-csr_assert_gen:0.1

@@ -176,8 +176,8 @@ module aes_cipher_control_fsm import aes_pkg::*;
 
           end else if (dec_key_gen_i || crypt_i) begin
             // Start encryption/decryption or generation of start key for decryption.
-            crypt_d_o       = ~dec_key_gen_i & crypt_i;
-            dec_key_gen_d_o =  dec_key_gen_i;
+            crypt_d_o       =  dec_key_gen_i & crypt_i;
+            dec_key_gen_d_o =  ~dec_key_gen_i;
 
             // Latch whether we shall reseed the masking PRNG.
             prng_reseed_d_o = SecMasking & prng_reseed_i;

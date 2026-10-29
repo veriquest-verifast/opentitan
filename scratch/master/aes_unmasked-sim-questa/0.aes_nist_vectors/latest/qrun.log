@@ -1,0 +1,354 @@
+QuestaSim-64 qrun 2025.2 Utility 2025.05 May 31 2025
+Start time: 14:43:15 on Oct 29,2026
+qrun -simulate "+uvm_set_verbosity=uvm_test_top.env.scoreboard,_ALL_,UVM_MEDIUM,run" "+cdc_instrumentation_enabled=1" "+UVM_NO_RELNOTES" "+UVM_VERBOSITY=UVM_LOW" -outdir /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out -sv_lib /cadtools/mentor/Questa_2025.2/questasim/uvm-1.2/linux_x86_64/uvm_dpi -sv_seed 1 -suppress vsim-8323 -permit_unmatched_virtual_intf "+UVM_TESTNAME=aes_wake_up_test" "+UVM_TEST_SEQ=aes_nist_vectors_vseq" -do "/home/kthakkar/opentitan_new/opentitan/hw/dv/tools/questa/sim.tcl" -ldflags "-lcrypto" 
+** Note: (qrun-220) '/cadtools/mentor/Questa_2025.2/questasim/linux_x86_64/../modelsim.ini' is used as the ini file.
+** Note: (vsim-220) '/cadtools/mentor/Questa_2025.2/questasim/linux_x86_64/../modelsim.ini' is used as the ini file.
+vsim "+uvm_set_verbosity=uvm_test_top.env.scoreboard,_ALL_,UVM_MEDIUM,run" "+cdc_instrumentation_enabled=1" "+UVM_NO_RELNOTES" "+UVM_VERBOSITY=UVM_LOW" -sv_lib /cadtools/mentor/Questa_2025.2/questasim/uvm-1.2/linux_x86_64/uvm_dpi -sv_seed 1 -permit_unmatched_virtual_intf "+UVM_TESTNAME=aes_wake_up_test" "+UVM_TEST_SEQ=aes_nist_vectors_vseq" -ldflags "-lcrypto" -lib /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/work -c -do "/home/kthakkar/opentitan_new/opentitan/hw/dv/tools/questa/sim.tcl" -statslog /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/stats_log qrun_opt -suppress 8323 -appendlog -l qrun.log 
+Start time: 14:43:16 on Oct 29,2026
+# Loading /tmp/kthakkar@VFSRV02_dpi_3281468/linux_x86_64_gcc-10.3.0/export_tramp.so
+//  Questa Sim-64
+//  Version 2025.2 linux_x86_64 May 31 2025
+//
+// Unpublished work. Copyright 2025 Siemens
+//
+// This material contains trade secrets or otherwise confidential information
+// owned by Siemens Industry Software Inc. or its affiliates (collectively,
+// "SISW"), or its licensors. Access to and use of this information is strictly
+// limited as set forth in the Customer's applicable agreements with SISW.
+//
+// This material may not be copied, distributed, or otherwise disclosed outside
+// of the Customer's facilities without the express written permission of SISW,
+// and may not be used in any way not expressly authorized by SISW.
+//
+Loading sv_std.std
+Loading work.uvm_pkg_sv_unit(fast)
+Loading work.aes_bind(fast)
+Loading work.prim_mubi_pkg(fast)
+Loading work.aes_cov_bind(fast)
+Loading work.sec_cm_prim_sparse_fsm_flop_bind(fast)
+Loading work.sec_cm_prim_onehot_check_bind(fast)
+** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+This also means that later if you turn on UVM-aware debugging your debug simulations may have
+different random seeds from your non-debug simulations.
+Loading work.keymgr_dpe_reg_pkg(fast)
+Loading work.keymgr_dpe_pkg(fast)
+Loading work.key_sideload_if(fast)
+Loading work.clk_rst_if(fast)
+Loading work.pins_if(fast)
+Loading work.aes_reseed_if(fast)
+Loading work.aes_masking_reseed_if(fast)
+Loading work.force_if(fast)
+Loading work.fi_control_if(fast)
+Loading work.fi_cipher_if(fast)
+Loading work.fi_ctr_fsm_if(fast)
+Loading work.fi_ghash_if(fast)
+Loading work.fi_core_if(fast)
+Loading work.aes_cov_if(fast)
+Loading work.rst_shadowed_if(fast)
+Loading work.prim_util_pkg(fast)
+Loading work.aes_reg_pkg(fast)
+Loading work.aes_pkg(fast)
+Loading work.tl_if(fast)
+Loading work.alert_if(fast)
+Loading work.push_pull_if(fast)
+Loading work.uvm_pkg(fast)
+Loading work.nist_vectors_gcm_pkg(fast)
+Loading work.nist_vectors_pkg(fast)
+Loading work.aes_model_dpi_pkg(fast)
+Loading work.dv_test_status_pkg(fast)
+Loading work.str_utils_pkg(fast)
+Loading work.top_pkg(fast)
+Loading work.bus_params_pkg(fast)
+Loading work.dv_utils_pkg(fast)
+Loading work.dv_base_agent_pkg(fast)
+Loading work.dv_base_reg_pkg(fast)
+Loading work.csr_utils_pkg(fast)
+Loading work.dv_lib_pkg(fast)
+Loading work.key_sideload_agent_pkg(fast)
+Loading work.aes_ral_pkg(fast)
+Loading work.lc_ctrl_reg_pkg(fast)
+Loading work.lc_ctrl_state_pkg(fast)
+Loading work.lc_ctrl_pkg(fast)
+Loading work.prim_alert_pkg(fast)
+Loading work.sec_cm_pkg(fast)
+Loading work.push_pull_agent_pkg(fast)
+Loading work.alert_agent_pkg(fast)
+Loading work.mem_model_pkg(fast)
+Loading work.prim_secded_pkg(fast)
+Loading work.tlul_pkg(fast)
+Loading work.tl_agent_pkg(fast)
+Loading work.cip_base_pkg(fast)
+Loading work.aes_env_pkg(fast)
+Loading work.aes_err_injection_bind(fast)
+Loading work.aes_test_pkg(fast)
+Loading work.tb(fast)
+Loading work.common_ifs_pkg(fast)
+Loading work.clk_rst_if(fast__2)
+Loading work.rst_shadowed_if(fast__2)
+Loading work.pins_if(fast__4)
+Loading work.pins_if(fast__5)
+Loading work.tl_if(fast__2)
+Loading work.key_sideload_if(fast__2)
+Loading work.entropy_src_pkg(fast)
+Loading work.csrng_reg_pkg(fast)
+Loading work.csrng_pkg(fast)
+Loading work.edn_pkg(fast)
+Loading work.aes(fast)
+Loading work.prim_subreg_pkg(fast)
+Loading work.aes_reg_top(fast)
+Loading work.tlul_cmd_intg_chk(fast)
+Loading work.prim_secded_inv_64_57_dec(fast)
+Loading work.tlul_data_integ_dec(fast)
+Loading work.prim_secded_inv_39_32_dec(fast)
+Loading work.prim_reg_we_check(fast)
+Loading work.prim_buf(fast)
+Loading work.prim_onehot_check(fast)
+Loading work.prim_onehot_check_if(fast__1)
+Loading work.tlul_rsp_intg_gen(fast)
+Loading work.prim_secded_inv_64_57_enc(fast)
+Loading work.tlul_data_integ_enc(fast)
+Loading work.prim_secded_inv_39_32_enc(fast)
+Loading work.tlul_adapter_reg(fast)
+Loading work.tlul_rsp_intg_gen(fast__1)
+Loading work.tlul_err(fast)
+Loading work.prim_subreg_ext(fast)
+Loading work.prim_subreg(fast)
+Loading work.prim_subreg_arb(fast)
+Loading work.prim_subreg_ext(fast__1)
+Loading work.prim_flop(fast)
+Loading work.prim_subreg(fast__1)
+Loading work.prim_subreg_arb(fast__1)
+Loading work.prim_subreg_ext(fast__2)
+Loading work.prim_subreg_ext(fast__3)
+Loading work.prim_subreg_ext(fast__4)
+Loading work.prim_subreg_shadow(fast)
+Loading work.prim_subreg_arb(fast__2)
+Loading work.prim_subreg(fast__2)
+Loading work.prim_subreg_shadow(fast__1)
+Loading work.prim_subreg(fast__3)
+Loading work.prim_subreg(fast__4)
+Loading work.prim_subreg_arb(fast__3)
+Loading work.prim_subreg(fast__5)
+Loading work.prim_subreg(fast__6)
+Loading work.prim_subreg_arb(fast__4)
+Loading work.prim_subreg_ext(fast__5)
+Loading work.prim_lc_sync(fast)
+Loading work.prim_flop_2sync(fast)
+Loading work.prim_cdc_rand_delay(fast)
+Loading work.prim_flop(fast__1)
+Loading work.prim_sec_anchor_buf(fast)
+Loading work.prim_buf(fast__1)
+Loading work.prim_sync_reqack_data(fast)
+Loading work.prim_sync_reqack(fast)
+Loading work.prim_flop_2sync(fast__1)
+Loading work.prim_cdc_rand_delay(fast__1)
+Loading work.aes_core(fast)
+Loading work.aes_prng_clearing(fast)
+Loading work.prim_cipher_pkg(fast)
+Loading work.prim_lfsr(fast)
+Loading work.prim_sec_anchor_buf(fast__1)
+Loading work.prim_buf(fast__2)
+Loading work.prim_sec_anchor_buf(fast__2)
+Loading work.prim_buf(fast__3)
+Loading work.aes_ctr(fast)
+Loading work.aes_sel_buf_chk(fast)
+Loading work.prim_buf(fast__4)
+Loading work.aes_ctr_fsm_p(fast)
+Loading work.prim_buf(fast__5)
+Loading work.aes_ctr_fsm(fast)
+Loading work.prim_sparse_fsm_flop(fast)
+Loading work.prim_flop(fast__2)
+Loading work.prim_sparse_fsm_flop_if(fast__1)
+Loading work.signal_force(fast)
+Loading work.force_if(fast__4)
+Loading work.fi_ctr_fsm_wrapper(fast)
+Loading work.fi_ctr_fsm_if(fast__2)
+Loading work.prim_buf(fast__6)
+Loading work.aes_ctr_fsm_n(fast)
+Loading work.prim_buf(fast__7)
+Loading work.aes_cipher_core(fast)
+Loading work.aes_sub_bytes(fast)
+Loading work.aes_sel_buf_chk(fast__1)
+Loading work.prim_sec_anchor_buf(fast__3)
+Loading work.aes_sbox(fast)
+Loading work.aes_sbox_canright_pkg(fast)
+Loading work.aes_sbox_canright(fast)
+Loading work.aes_shift_rows(fast)
+Loading work.aes_mix_columns(fast)
+Loading work.aes_mix_single_column(fast)
+Loading work.aes_key_expand(fast)
+Loading work.aes_cipher_control(fast)
+Loading work.aes_cipher_control_fsm_p(fast)
+Loading work.prim_buf(fast__8)
+Loading work.aes_cipher_control_fsm(fast)
+Loading work.prim_sparse_fsm_flop(fast__1)
+Loading work.prim_flop(fast__3)
+Loading work.prim_sparse_fsm_flop_if(fast__2)
+Loading work.signal_force(fast__1)
+Loading work.force_if(fast__5)
+Loading work.fi_cipher_fsm_wrapper(fast)
+Loading work.fi_cipher_if(fast__2)
+Loading work.prim_buf(fast__9)
+Loading work.aes_cipher_control_fsm_n(fast)
+Loading work.prim_flop(fast__4)
+Loading work.aes_sel_buf_chk(fast__2)
+Loading work.prim_sec_anchor_buf(fast__4)
+Loading work.prim_buf(fast__10)
+Loading work.aes_sel_buf_chk(fast__3)
+Loading work.aes_ctrl_reg_shadowed(fast)
+Loading work.prim_subreg_shadow(fast__2)
+Loading work.prim_subreg_arb(fast__5)
+Loading work.prim_subreg(fast__7)
+Loading work.prim_subreg_shadow(fast__3)
+Loading work.prim_subreg_arb(fast__6)
+Loading work.prim_subreg(fast__8)
+Loading work.prim_subreg_shadow(fast__4)
+Loading work.prim_subreg_arb(fast__7)
+Loading work.prim_subreg(fast__9)
+Loading work.prim_subreg_shadow(fast__5)
+Loading work.aes_ctrl_gcm_reg_shadowed(fast)
+Loading work.aes_control(fast)
+Loading work.aes_control_fsm_p(fast)
+Loading work.prim_buf(fast__11)
+Loading work.aes_control_fsm(fast)
+Loading work.prim_sparse_fsm_flop(fast__2)
+Loading work.prim_sparse_fsm_flop_if(fast__3)
+Loading work.aes_reg_status(fast)
+Loading work.aes_reg_status(fast__1)
+Loading work.signal_force(fast__2)
+Loading work.force_if(fast__6)
+Loading work.fi_control_fsm_wrapper(fast)
+Loading work.fi_control_if(fast__2)
+Loading work.aes_control_fsm_p(fast__1)
+Loading work.aes_control_fsm(fast__1)
+Loading work.aes_control_fsm_n(fast)
+Loading work.aes_sel_buf_chk(fast__4)
+Loading work.prim_sec_anchor_buf(fast__5)
+Loading work.prim_buf(fast__12)
+Loading work.fi_core_wrapper(fast)
+Loading work.fi_core_if(fast__2)
+Loading work.prim_alert_sender(fast)
+Loading work.prim_sec_anchor_buf(fast__6)
+Loading work.prim_diff_decode(fast)
+Loading work.prim_flop_2sync(fast__2)
+Loading work.prim_flop(fast__5)
+Loading work.prim_sec_anchor_flop(fast)
+Loading work.prim_flop(fast__6)
+Loading work.prim_alert_sender(fast__1)
+Loading work.aes_cov_if(fast__2)
+Loading work.cip_lc_tx_cov_if(fast__1)
+Loading work.tlul_assert(fast)
+Loading work.aes_csr_assert_fpv(fast)
+Loading work.aes_idle_check(fast)
+Loading work.aes_reseed_if(fast__2)
+Loading work.push_pull_if(fast__2)
+Loading work.alert_if(fast__2)
+Loading work.clk_rst_if(fast__3)
+Compiling /tmp/kthakkar@VFSRV02_dpi_3281468/linux_x86_64_gcc-10.3.0/exportwrapper.c
+# Loading /tmp/kthakkar@VFSRV02_dpi_3281468/linux_x86_64_gcc-10.3.0/vsim_auto_compile.so
+# Loading /cadtools/mentor/Questa_2025.2/questasim/uvm-1.2/linux_x86_64/uvm_dpi.so
+do /home/kthakkar/opentitan_new/opentitan/hw/dv/tools/questa/sim.tcl
+0
+0
+tb.dut.u_aes_core.u_aes_prng_clearing.u_lfsr.p_randomize_default_seed: DefaultSeed = 0xc32d580f74f1713a, DefaultSeedLocal = 0x2b79f592f81dffbf
+UVM_INFO @ 0 ps: reporter [RNTST] Running test aes_wake_up_test...
+UVM_INFO @         0 ps: (aes_env_cfg.sv:196) [cfg] Use KEY MAST: 0
+UVM_INFO @         0 ps: (aes_env_cfg.sv:196) [cfg] Use KEY MAST: 0
+UVM_INFO @         0 ps: (aes_env_cfg.sv:196) [cfg] Use KEY MAST: 0
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 0 ps  Iteration: 13  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#2213_7feff09577c File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_dv_lib_0/dv_base_env.sv Line: 91
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 0 ps  Iteration: 55  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff09923e File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 0 ps  Iteration: 55  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff09926a File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_ctr_fsm_if.sv:114) [tb.dut.u_aes_core.u_aes_ctr.gen_fsm[0].gen_fsm_p.u_aes_ctr_fsm_i.u_aes_ctr_fsm.u_control_ctr_fsm_fi.fi_if] Creating covergroup aes_ctr_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_ctr_fsm_if.sv:114) [tb.dut.u_aes_core.u_aes_ctr.gen_fsm[1].gen_fsm_p.u_aes_ctr_fsm_i.u_aes_ctr_fsm.u_control_ctr_fsm_fi.fi_if] Creating covergroup aes_ctr_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_ctr_fsm_if.sv:114) [tb.dut.u_aes_core.u_aes_ctr.gen_fsm[2].gen_fsm_n.u_aes_ctr_fsm_i.u_aes_ctr_fsm.u_control_ctr_fsm_fi.fi_if] Creating covergroup aes_ctr_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_cipher_if.sv:241) [tb.dut.u_aes_core.u_aes_cipher_core.u_aes_cipher_control.gen_fsm[0].gen_fsm_p.u_aes_cipher_control_fsm_i.u_aes_cipher_control_fsm.u_control_cipher_fi.fi_if] Creating covergroup aes_cipher_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_cipher_if.sv:241) [tb.dut.u_aes_core.u_aes_cipher_core.u_aes_cipher_control.gen_fsm[1].gen_fsm_p.u_aes_cipher_control_fsm_i.u_aes_cipher_control_fsm.u_control_cipher_fi.fi_if] Creating covergroup aes_cipher_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_cipher_if.sv:241) [tb.dut.u_aes_core.u_aes_cipher_core.u_aes_cipher_control.gen_fsm[2].gen_fsm_n.u_aes_cipher_control_fsm_i.u_aes_cipher_control_fsm.u_control_cipher_fi.fi_if] Creating covergroup aes_cipher_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_control_if.sv:211) [tb.dut.u_aes_core.u_aes_control.gen_fsm[0].gen_fsm_p.u_aes_control_fsm_i.u_aes_control_fsm.u_fi_ctrl_fsm.fi_if] Creating covergroup aes_ctrl_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_control_if.sv:211) [tb.dut.u_aes_core.u_aes_control.gen_fsm[1].gen_fsm_p.u_aes_control_fsm_i.u_aes_control_fsm.u_fi_ctrl_fsm.fi_if] Creating covergroup aes_ctrl_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_control_if.sv:211) [tb.dut.u_aes_core.u_aes_control.gen_fsm[2].gen_fsm_n.u_aes_control_fsm_i.u_aes_control_fsm.u_fi_ctrl_fsm.fi_if] Creating covergroup aes_ctrl_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_core_if.sv:104) [tb.dut.u_aes_core.u_core_fi.fi_if] Creating covergroup aes_core_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:377) [tb.dut.u_aes_cov_if] Creating covergroup aes_aux_regwen_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:378) [tb.dut.u_aes_cov_if] Creating covergroup aes_ctrl_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:379) [tb.dut.u_aes_cov_if] Creating covergroup aes_status_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:380) [tb.dut.u_aes_cov_if] Creating covergroup aes_trigger_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:381) [tb.dut.u_aes_cov_if] Creating covergroup aes_alert_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:382) [tb.dut.u_aes_cov_if] Creating covergroup aes_wr_data_interleave_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:383) [tb.dut.u_aes_cov_if] Creating covergroup aes_rd_data_interleave_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:384) [tb.dut.u_aes_cov_if] Creating covergroup aes_iv_interleave_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:385) [tb.dut.u_aes_cov_if] Creating covergroup aes_key_interleave_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:386) [tb.dut.u_aes_cov_if] Creating covergroup aes_reg_interleave_cg
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 7292 ps  Iteration: 1  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff09926a File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 7292 ps  Iteration: 1  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff09923e File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 1756962 ps  Iteration: 3  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff09923e File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 1756962 ps  Iteration: 3  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff09926a File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+UVM_INFO @   4642633 ps: (aes_nist_vectors_vseq.sv:29) uvm_test_top.env.virtual_sequencer [uvm_test_top.env.virtual_sequencer.aes_nist_vectors_vseq] STARTING AES NIST VECTOR SEQUENCE
+UVM_INFO @   4642633 ps: (aes_nist_vectors_vseq.sv:34) uvm_test_top.env.virtual_sequencer [uvm_test_top.env.virtual_sequencer.aes_nist_vectors_vseq] size of array          15
+UVM_INFO @   4728346 ps: (aes_nist_vectors_vseq.sv:41) uvm_test_top.env.virtual_sequencer [uvm_test_top.env.virtual_sequencer.aes_nist_vectors_vseq] 
+ ----| NIST Vector | ---- 
+ Notes that the Nist Vectors are listed in little endian format 
+ and need to be byteswapped for use with AES 
+ Mode: AES_ECB 
+ Key Len: AES_128 
+ Key: 2b7e151628aed2a6abf7158809cf4f3c00000000000000000000000000000000 
+ Iv: 0 
+ plaintext: 6bc1bee22e409f96e93d7e117393172a 
+ plaintext: ae2d8a571e03ac9c9eb76fac45af8e51 
+ plaintext: 30c81c46a35ce411e5fbc1191a0a52ef 
+ plaintext: f69f2445df4f9b17ad2b417be66c3710 
+ ciphertext: 3ad77bb40d7a3660a89ecaf32466ef97 
+ ciphertext: f5d3d58503b9699de785895a96fdbaaf 
+ ciphertext: 43b1cd7f598ece23881b00e3ed030688 
+ ciphertext: 7b0c785e27e8ad3f8223207104725dd4
+UVM_FATAL @ 10006699745 ps: (csr_utils_pkg.sv:619) [csr_utils_pkg.csr_spinwait.isolation_fork] timeout aes_reg_block_extended.status.output_valid (addr=0xcb2c084, Comparison=CompareOpEq, exp_data=0x1, call_count=5)
+UVM_INFO @ 10006699745 ps: (uvm_report_catcher.svh:705) [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO @ 10006699745 ps: (uvm_report_server.svh:847) [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+Quit count :     0 of     1
+** Report counts by severity
+UVM_INFO :    8
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    1
+** Report counts by id
+[RNTST]     1
+[UVM/REPORT/CATCHER]     1
+[cfg]     3
+[csr_utils_pkg.csr_spinwait.isolation_fork]     1
+[uvm_test_top.env.virtual_sequencer.aes_nist_vectors_vseq]     3
+
+
+TEST FAILED CHECKS
+ _____         _      __       _ _          _ _ 
+|_   _|__  ___| |_   / _| __ _(_) | ___  __| | |
+  | |/ _ \/ __| __| | |_ / _` | | |/ _ \/ _` | |
+  | |  __/\__ \ |_  |  _| (_| | | |  __/ (_| |_|
+  |_|\___||___/\__| |_|  \__,_|_|_|\___|\__,_(_)
+
+** Note: $finish    : /cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(135)
+   Time: 10006699745 ps  Iteration: 0  Region: /csr_utils_pkg::csr_spinwait
+End time: 14:44:39 on Oct 29,2026, Elapsed time: 0:01:23
+Errors: 0, Warnings: 7
+End time: 14:44:39 on Oct 29,2026, Elapsed time: 0:01:24
+*** Summary *********************************************
+    qrun: Errors:   0, Warnings:   0
+    vsim: Errors:   0, Warnings:   7
+  Totals: Errors:   0, Warnings:   7

@@ -1,0 +1,1460 @@
+[Executing]:
+make -f /home/kthakkar/opentitan_new/opentitan/hw/dv/tools/dvsim/sim.mk build build_cmd='/cadtools/mentor/Questa_2025.2/questasim/linux_x86_64/qrun -optimize' build_dir=/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default build_opts='+define+UVM +define+UVM_NO_DEPRECATED +define+UVM_REGEX_NO_DPI +define+UVM_REG_ADDR_WIDTH=32 +define+UVM_REG_DATA_WIDTH=32 +define+UVM_REG_BYTENABLE_WIDTH=4 +define+SIMULATION +define+DUT_HIER=tb.dut -timescale 1ns/1ps -outdir /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out -uvm -uvmhome /cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2 +incdir+/cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src /cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src/uvm_pkg.sv -sv_lib /cadtools/mentor/Questa_2025.2/questasim/uvm-1.2/linux_x86_64/uvm_dpi -mfcu -f /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/lowrisc_dv_aes_sim_0.1.scr -top aes_bind -top aes_cov_bind -top sec_cm_prim_sparse_fsm_flop_bind -top sec_cm_prim_onehot_check_bind -top aes_err_injection_bind -top tb -voptargs="+acc=nr" +define+EN_MASKING=0 +define+SBOX_IMPL=aes_pkg::SBoxImplCanright +define+EN_GCM=0 -ccflags "-include /usr/include/openssl/bn.h -I/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_model_aes_1.0" -ldflags -lcrypto -suppress 10717' post_build_cmds='' post_build_opts='' pre_build_cmds='' proj_root=/home/kthakkar/opentitan_new/opentitan sv_flist_gen_cmd=fusesoc sv_flist_gen_dir=/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work sv_flist_gen_opts='--cores-root /home/kthakkar/opentitan_new/opentitan/hw run --mapping=lowrisc:prim_generic:all:0.1 --target=sim --work-root=/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work --setup lowrisc:dv:aes_sim:0.1'
+
+
+[make]: pre_build
+mkdir -p /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default
+
+[make]: gen_sv_flist
+cd /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default && fusesoc --cores-root /home/kthakkar/opentitan_new/opentitan/hw run --mapping=lowrisc:prim_generic:all:0.1 --target=sim --work-root=/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work --setup lowrisc:dv:aes_sim:0.1
+INFO: Mapped lowrisc:prim:ram_1p:0 to lowrisc:prim_generic:ram_1p:0.
+INFO: Mapped lowrisc:prim:clock_mux2:0 to lowrisc:prim_generic:clock_mux2:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:clock_inv:0 to lowrisc:prim_generic:clock_inv:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:ram_1p:0 to lowrisc:prim_generic:ram_1p:0.
+INFO: Mapped lowrisc:prim:clock_mux2:0 to lowrisc:prim_generic:clock_mux2:0.
+INFO: Mapped lowrisc:prim:clock_mux2:0 to lowrisc:prim_generic:clock_mux2:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:ram_2p_pkg:0 to lowrisc:prim_generic:ram_2p_pkg:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:ram_1p_pkg:0 to lowrisc:prim_generic:ram_1p_pkg:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:clock_mux2:0 to lowrisc:prim_generic:clock_mux2:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:clock_inv:0 to lowrisc:prim_generic:clock_inv:0.
+INFO: Mapped lowrisc:prim:ram_2p_pkg:0 to lowrisc:prim_generic:ram_2p_pkg:0.
+INFO: Mapped lowrisc:prim:ram_1r1w_pkg:0 to lowrisc:prim_generic:ram_1r1w_pkg:0.
+INFO: Mapped lowrisc:prim:rst_sync:0 to lowrisc:prim_generic:rst_sync:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:ram_1p_pkg:0 to lowrisc:prim_generic:ram_1p_pkg:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:clock_inv:0 to lowrisc:prim_generic:clock_inv:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:ram_1p:0 to lowrisc:prim_generic:ram_1p:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:flop_en:0 to lowrisc:prim_generic:flop_en:0.
+INFO: Mapped lowrisc:prim:flop_en:0 to lowrisc:prim_generic:flop_en:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:clock_inv:0 to lowrisc:prim_generic:clock_inv:0.
+INFO: Mapped lowrisc:prim:ram_2p:0 to lowrisc:prim_generic:ram_2p:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:ram_1p:0 to lowrisc:prim_generic:ram_1p:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:ram_1r1w:0 to lowrisc:prim_generic:ram_1r1w:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:xnor2:0 to lowrisc:prim_generic:xnor2:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:rom:0 to lowrisc:prim_generic:rom:0.
+INFO: Mapped lowrisc:prim:and2:0 to lowrisc:prim_generic:and2:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:pad_wrapper:0 to lowrisc:prim_generic:pad_wrapper:0.
+INFO: Mapped lowrisc:prim:clock_mux2:0 to lowrisc:prim_generic:clock_mux2:0.
+INFO: Mapped lowrisc:prim:clock_inv:0 to lowrisc:prim_generic:clock_inv:0.
+INFO: Mapped lowrisc:prim:const:0 to lowrisc:prim_generic:const:0.
+INFO: Mapped lowrisc:prim:const_sec:0 to lowrisc:prim_generic:const_sec:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:flop_en:0 to lowrisc:prim_generic:flop_en:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:flop_no_rst:0 to lowrisc:prim_generic:flop_no_rst:0.
+INFO: Mapped lowrisc:prim:rst_sync:0 to lowrisc:prim_generic:rst_sync:0.
+INFO: Mapped lowrisc:prim:xor2:0 to lowrisc:prim_generic:xor2:0.
+INFO: Mapped lowrisc:prim:xnor2:0 to lowrisc:prim_generic:xnor2:0.
+INFO: Mapped lowrisc:prim:and2:0 to lowrisc:prim_generic:and2:0.
+INFO: Mapped lowrisc:prim:inv:0 to lowrisc:prim_generic:inv:0.
+INFO: Mapped lowrisc:prim:clock_inv:0 to lowrisc:prim_generic:clock_inv:0.
+INFO: Mapped lowrisc:prim:and2:0 to lowrisc:prim_generic:and2:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:clock_mux2:0 to lowrisc:prim_generic:clock_mux2:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:virtual_prim_tech:all:0 to lowrisc:prim_generic:all:0.
+INFO: Mapped lowrisc:prim:usb_diff_rx:0 to lowrisc:prim_generic:usb_diff_rx:0.
+INFO: Mapped lowrisc:prim:clock_div:0 to lowrisc:prim_generic:clock_div:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:clock_div:0 to lowrisc:prim_generic:clock_div:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:clock_mux2:0 to lowrisc:prim_generic:clock_mux2:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:ram_1p:0 to lowrisc:prim_generic:ram_1p:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:prim_pkg:0 to lowrisc:prim_generic:prim_pkg:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:and2:0 to lowrisc:prim_generic:and2:0.
+INFO: Mapped lowrisc:prim:pad_attr:0 to lowrisc:prim_generic:pad_attr:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:ram_1p_pkg:0 to lowrisc:prim_generic:ram_1p_pkg:0.
+INFO: Mapped lowrisc:prim:ram_1r1w_pkg:0 to lowrisc:prim_generic:ram_1r1w_pkg:0.
+INFO: Mapped lowrisc:prim:rom_pkg:0 to lowrisc:prim_generic:rom_pkg:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:clock_div:0 to lowrisc:prim_generic:clock_div:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:clock_inv:0 to lowrisc:prim_generic:clock_inv:0.
+INFO: Mapped lowrisc:prim:prim_pkg:0 to lowrisc:prim_generic:prim_pkg:0.
+INFO: Mapped lowrisc:prim:ram_1p_pkg:0 to lowrisc:prim_generic:ram_1p_pkg:0.
+INFO: Mapped lowrisc:prim:ram_2p_pkg:0 to lowrisc:prim_generic:ram_2p_pkg:0.
+INFO: Mapped lowrisc:prim:ram_1r1w_pkg:0 to lowrisc:prim_generic:ram_1r1w_pkg:0.
+INFO: Mapped lowrisc:prim:rom_pkg:0 to lowrisc:prim_generic:rom_pkg:0.
+INFO: Mapped lowrisc:virtual_prim_tech:all:0 to lowrisc:prim_generic:all:0.
+INFO: Mapped lowrisc:prim:clock_div:0 to lowrisc:prim_generic:clock_div:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:clock_div:0 to lowrisc:prim_generic:clock_div:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:clock_mux2:0 to lowrisc:prim_generic:clock_mux2:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:ram_1p:0 to lowrisc:prim_generic:ram_1p:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:flop:0 to lowrisc:prim_generic:flop:0.
+INFO: Mapped lowrisc:prim:prim_pkg:0 to lowrisc:prim_generic:prim_pkg:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:and2:0 to lowrisc:prim_generic:and2:0.
+INFO: Mapped lowrisc:prim:pad_attr:0 to lowrisc:prim_generic:pad_attr:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:ram_1p_pkg:0 to lowrisc:prim_generic:ram_1p_pkg:0.
+INFO: Mapped lowrisc:prim:ram_1r1w_pkg:0 to lowrisc:prim_generic:ram_1r1w_pkg:0.
+INFO: Mapped lowrisc:prim:rom_pkg:0 to lowrisc:prim_generic:rom_pkg:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:clock_div:0 to lowrisc:prim_generic:clock_div:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:clock_inv:0 to lowrisc:prim_generic:clock_inv:0.
+INFO: Mapped lowrisc:prim:prim_pkg:0 to lowrisc:prim_generic:prim_pkg:0.
+INFO: Mapped lowrisc:prim:prim_pkg:0 to lowrisc:prim_generic:prim_pkg:0.
+INFO: Mapped lowrisc:prim:ram_1p_pkg:0 to lowrisc:prim_generic:ram_1p_pkg:0.
+INFO: Mapped lowrisc:prim:ram_2p_pkg:0 to lowrisc:prim_generic:ram_2p_pkg:0.
+INFO: Mapped lowrisc:prim:ram_1r1w_pkg:0 to lowrisc:prim_generic:ram_1r1w_pkg:0.
+INFO: Mapped lowrisc:prim:rom_pkg:0 to lowrisc:prim_generic:rom_pkg:0.
+INFO: Mapped lowrisc:prim:clock_div:0 to lowrisc:prim_generic:clock_div:0.
+INFO: Mapped lowrisc:prim:flash:0 to lowrisc:prim_generic:flash:0.
+INFO: Mapped lowrisc:prim:clock_div:0 to lowrisc:prim_generic:clock_div:0.
+INFO: Mapped lowrisc:prim:flash:0 to lowrisc:prim_generic:flash:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:prim_pkg:0 to lowrisc:prim_generic:prim_pkg:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:clock_div:0 to lowrisc:prim_generic:clock_div:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:clock_mux2:0 to lowrisc:prim_generic:clock_mux2:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:flop_2sync:0 to lowrisc:prim_generic:flop_2sync:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:buf:0 to lowrisc:prim_generic:buf:0.
+INFO: Mapped lowrisc:prim:and2:0 to lowrisc:prim_generic:and2:0.
+INFO: Mapped lowrisc:prim:pad_attr:0 to lowrisc:prim_generic:pad_attr:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:ram_1p_pkg:0 to lowrisc:prim_generic:ram_1p_pkg:0.
+INFO: Mapped lowrisc:prim:ram_1r1w_pkg:0 to lowrisc:prim_generic:ram_1r1w_pkg:0.
+INFO: Mapped lowrisc:prim:rom_pkg:0 to lowrisc:prim_generic:rom_pkg:0.
+INFO: Mapped lowrisc:prim:clock_buf:0 to lowrisc:prim_generic:clock_buf:0.
+INFO: Mapped lowrisc:prim:clock_div:0 to lowrisc:prim_generic:clock_div:0.
+INFO: Mapped lowrisc:prim:clock_gating:0 to lowrisc:prim_generic:clock_gating:0.
+INFO: Mapped lowrisc:prim:clock_inv:0 to lowrisc:prim_generic:clock_inv:0.
+INFO: Mapped lowrisc:prim:prim_pkg:0 to lowrisc:prim_generic:prim_pkg:0.
+WARNING: Non-deterministic selection of virtual core lowrisc:virtual_constants:top_racl_pkg:0 selected lowrisc:darjeeling_constants:top_racl_pkg:0.1
+INFO: Preparing lowrisc:dv:dv_fcov_macros:0
+INFO: Preparing lowrisc:dv:dv_macros:0
+INFO: Preparing lowrisc:dv:pins_if:0
+INFO: Preparing lowrisc:dv:ralgen:0
+INFO: Preparing lowrisc:dv:rst_shadowed_if:0
+INFO: Preparing lowrisc:fpv:csr_assert_gen:0
+INFO: Preparing lowrisc:ip:jtag_pkg:0.1
+INFO: Preparing lowrisc:model:aes:1.0
+INFO: Preparing lowrisc:prim:assert:0.1
+INFO: Preparing lowrisc:prim:cipher_pkg:0.1
+INFO: Preparing lowrisc:prim_generic:and2:0
+INFO: Preparing lowrisc:prim_generic:buf:0
+INFO: Preparing lowrisc:prim_generic:const:0
+INFO: Preparing lowrisc:prim_generic:const_sec:0
+INFO: Preparing lowrisc:prim_generic:flop:0
+INFO: Preparing lowrisc:prim_generic:flop_no_rst:0
+INFO: Preparing lowrisc:prim_generic:inv:0
+INFO: Preparing lowrisc:prim_generic:xnor2:0
+INFO: Preparing lowrisc:prim_generic:xor2:0
+INFO: Preparing lowrisc:prim:pad_wrapper_pkg:0
+INFO: Preparing lowrisc:prim:secded:0.1
+INFO: Preparing lowrisc:prim:sha2_pkg:0
+INFO: Preparing lowrisc:dv:common_ifs:0
+INFO: Preparing lowrisc:dv:str_utils:0
+INFO: Preparing lowrisc:prim:blanker:0
+INFO: Preparing lowrisc:prim:cdc_rand_delay:0
+INFO: Preparing lowrisc:prim:cipher:0
+INFO: Preparing lowrisc:prim:count:0
+INFO: Preparing lowrisc:prim_generic:clock_mux2:0
+INFO: Preparing lowrisc:prim_generic:pad_wrapper:0
+INFO: Preparing lowrisc:prim:gf_mult:0
+INFO: Preparing lowrisc:prim:lfsr:0.1
+INFO: Preparing lowrisc:prim:mubi_pkg:0.1
+INFO: Preparing lowrisc:prim:sec_anchor:0.1
+INFO: Preparing lowrisc:prim:sha2:0
+INFO: Preparing lowrisc:prim:sparse_fsm:0
+INFO: Preparing lowrisc:prim:util:0.1
+INFO: Preparing lowrisc:darjeeling_constants:top_pkg:0
+INFO: Preparing lowrisc:dv:dv_test_status:0
+INFO: Preparing lowrisc:ip:entropy_src_pkg:0.1
+INFO: Preparing lowrisc:ip:lc_ctrl_state_pkg:0.1
+INFO: Preparing lowrisc:prim:double_lfsr:0
+INFO: Preparing lowrisc:prim_generic:clock_inv:0
+INFO: Preparing lowrisc:prim_generic:flop_2sync:0
+INFO: Preparing lowrisc:prim_generic:flop_en:0
+INFO: Preparing lowrisc:prim:leading_one_ppc:0
+INFO: Preparing lowrisc:prim:mubi:0.1
+INFO: Preparing lowrisc:prim:onehot:0
+INFO: Preparing lowrisc:prim:onehot_check:0
+INFO: Preparing lowrisc:prim:trivium:0.1
+INFO: Preparing lowrisc:opentitan:bus_params_pkg:0
+INFO: Preparing lowrisc:prim:arbiter:0
+INFO: Preparing lowrisc:prim:diff_decode:0
+INFO: Preparing lowrisc:prim:fifo:0
+INFO: Preparing lowrisc:prim_generic:rst_sync:0
+INFO: Preparing lowrisc:prim:reg_we_check:0
+INFO: Preparing lowrisc:prim:subreg:0
+INFO: Preparing lowrisc:tlul:headers:0.1
+INFO: Preparing lowrisc:darjeeling_constants:top_racl_pkg:0.1
+INFO: Preparing lowrisc:dv:dv_utils:0
+INFO: Preparing lowrisc:dv:mem_model:0
+INFO: Preparing lowrisc:ip:lc_ctrl_pkg:0.1
+INFO: Preparing lowrisc:prim:esc:0
+INFO: Preparing lowrisc:tlul:trans_intg:0.1
+INFO: Preparing lowrisc:dv:dv_base_agent:0
+INFO: Preparing lowrisc:dv:dv_base_reg:0
+INFO: Preparing lowrisc:ip:csrng_pkg:0.1
+INFO: Preparing lowrisc:prim:alert:0
+INFO: Preparing lowrisc:prim:lc_sync:0.1
+INFO: Preparing lowrisc:tlul:common:0.1
+INFO: Preparing lowrisc:dv:csr_utils:0
+INFO: Preparing lowrisc:dv:sec_cm:0
+INFO: Preparing lowrisc:ip:edn_pkg:0.1
+INFO: Preparing lowrisc:prim:all:0.1
+INFO: Preparing lowrisc:tlul:adapter_host:0.1
+INFO: Preparing lowrisc:tlul:adapter_reg:0.1
+INFO: Preparing lowrisc:tlul:adapter_sram:0.1
+INFO: Preparing lowrisc:tlul:lc_gate:0.1
+INFO: Preparing lowrisc:tlul:request_loopback:0.1
+INFO: Preparing lowrisc:tlul:socket_1n:0.1
+INFO: Preparing lowrisc:tlul:socket_m1:0.1
+INFO: Preparing lowrisc:tlul:sram2tlul:0.1
+INFO: Preparing lowrisc:dv:dv_lib:0
+INFO: Preparing lowrisc:ip:keymgr_dpe_pkg:0.1
+INFO: Preparing lowrisc:tlul:adapter_racl:0.1
+INFO: Preparing lowrisc:tlul:adapter_reg_racl:0.1
+INFO: Preparing pulp-platform:riscv-dbg:0.1:0
+INFO: Preparing lowrisc:dv:alert_agent:0
+INFO: Preparing lowrisc:dv:key_sideload_agent:0.1
+INFO: Preparing lowrisc:dv:push_pull_agent:0.1
+INFO: Preparing lowrisc:dv:tl_agent:0
+INFO: Preparing lowrisc:tlul:adapter_dmi:0.1
+INFO: Preparing lowrisc:tlul:adapter_sram_racl:0.1
+INFO: Preparing lowrisc:tlul:jtag_dtm:0.1
+INFO: Preparing lowrisc:dv:cip_lib:0
+INFO: Preparing lowrisc:ip:tlul:0.1
+INFO: Preparing lowrisc:ip:aes:1.0
+INFO: Preparing lowrisc:dv:aes_cov:0
+INFO: Preparing lowrisc:dv:aes_model_dpi:0
+INFO: Preparing lowrisc:dv:aes_sva:0.1
+INFO: Preparing lowrisc:dv:aes_test_vectors:0
+INFO: Preparing lowrisc:dv:aes_env:0.1
+INFO: Preparing lowrisc:dv:aes_err_injection:0.1
+INFO: Preparing lowrisc:dv:aes_test:0.1
+INFO: Preparing lowrisc:dv:aes_sim:0.1
+INFO: Generating lowrisc:dv:aes_sva-csr_assert_gen:0.1
+INFO: Generating lowrisc:dv:aes_env-ral:0.1
+Calling tool in ralgen.py: /home/kthakkar/opentitan_new/opentitan/hw/dv/tools/ralgen/../../../../util/regtool.py -s -t /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/generator_cache/lowrisc_dv_aes_env-ral_0.1-8ee2cdf195acbb42849f1a2e1ec00fd158cab6d14fbd03bcf5c4f3d9498b97b2 /home/kthakkar/opentitan_new/opentitan/hw/ip/aes/dv/env/../../data/aes.hjson
+RAL pkg for aes written to /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/generator_cache/lowrisc_dv_aes_env-ral_0.1-8ee2cdf195acbb42849f1a2e1ec00fd158cab6d14fbd03bcf5c4f3d9498b97b2.
+INFO: Setting up project
+
+[make]: build
+cd /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work && /cadtools/mentor/Questa_2025.2/questasim/linux_x86_64/qrun -optimize +define+UVM +define+UVM_NO_DEPRECATED +define+UVM_REGEX_NO_DPI +define+UVM_REG_ADDR_WIDTH=32 +define+UVM_REG_DATA_WIDTH=32 +define+UVM_REG_BYTENABLE_WIDTH=4 +define+SIMULATION +define+DUT_HIER=tb.dut -timescale 1ns/1ps -outdir /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out -uvm -uvmhome /cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2 +incdir+/cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src /cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src/uvm_pkg.sv -sv_lib /cadtools/mentor/Questa_2025.2/questasim/uvm-1.2/linux_x86_64/uvm_dpi -mfcu -f /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/lowrisc_dv_aes_sim_0.1.scr -top aes_bind -top aes_cov_bind -top sec_cm_prim_sparse_fsm_flop_bind -top sec_cm_prim_onehot_check_bind -top aes_err_injection_bind -top tb -voptargs="+acc=nr" +define+EN_MASKING=0 +define+SBOX_IMPL=aes_pkg::SBoxImplCanright +define+EN_GCM=0 -ccflags "-include /usr/include/openssl/bn.h -I/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_model_aes_1.0" -ldflags -lcrypto -suppress 10717
+QuestaSim-64 qrun 2025.2 Utility 2025.05 May 31 2025
+Start time: 14:43:05 on Oct 29,2026
+qrun -optimize "+define+UVM" "+define+UVM_NO_DEPRECATED" "+define+UVM_REGEX_NO_DPI" "+define+UVM_REG_ADDR_WIDTH=32" "+define+UVM_REG_DATA_WIDTH=32" "+define+UVM_REG_BYTENABLE_WIDTH=4" "+define+SIMULATION" "+define+DUT_HIER=tb.dut" -timescale 1ns/1ps -outdir /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out -uvm -uvmhome /cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2 "+incdir+/cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src" /cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src/uvm_pkg.sv -sv_lib /cadtools/mentor/Questa_2025.2/questasim/uvm-1.2/linux_x86_64/uvm_dpi -mfcu -f /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/lowrisc_dv_aes_sim_0.1.scr -top aes_bind -top aes_cov_bind -top sec_cm_prim_sparse_fsm_flop_bind -top sec_cm_prim_onehot_check_bind -top aes_err_injection_bind -top tb -voptargs="+acc=nr" "+define+EN_MASKING=0" "+define+SBOX_IMPL=aes_pkg::SBoxImplCanright" "+define+EN_GCM=0" -ccflags "-include /usr/include/openssl/bn.h -I/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_model_aes_1.0" -ldflags "-lcrypto" -suppress 10717 
+** Note: (qrun-220) '/cadtools/mentor/Questa_2025.2/questasim/linux_x86_64/../modelsim.ini' is used as the ini file.
+Creating library '/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/work'.
+Mapping library 'mtiUvm' to '/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/work'.
+** Note: (vmap-220) '/cadtools/mentor/Questa_2025.2/questasim/linux_x86_64/../modelsim.ini' is used as the ini file.
+QuestaSim-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+Start time: 14:43:05 on Oct 29,2026
+vlog "+define+UVM" "+define+UVM_NO_DEPRECATED" "+define+UVM_REGEX_NO_DPI" "+define+UVM_REG_ADDR_WIDTH=32" "+define+UVM_REG_DATA_WIDTH=32" "+define+UVM_REG_BYTENABLE_WIDTH=4" "+define+SIMULATION" "+define+DUT_HIER=tb.dut" -timescale 1ns/1ps "+incdir+/cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src" -mfcu "+incdir+src/lowrisc_dv_dv_fcov_macros_0" "+incdir+src/lowrisc_dv_dv_macros_0" "+incdir+src/lowrisc_model_aes_1.0" "+incdir+src/lowrisc_prim_assert_0.1/rtl" "+incdir+src/lowrisc_prim_secded_0.1/rtl" "+incdir+src/lowrisc_prim_fifo_0/rtl" "+incdir+src/lowrisc_dv_dv_utils_0" "+incdir+src/lowrisc_dv_mem_model_0" "+incdir+src/lowrisc_dv_dv_base_agent_0" "+incdir+src/lowrisc_dv_dv_base_reg_0" "+incdir+src/lowrisc_dv_csr_utils_0" "+incdir+src/lowrisc_dv_sec_cm_0" "+incdir+src/lowrisc_dv_dv_lib_0" "+incdir+src/lowrisc_dv_alert_agent_0" "+incdir+src/lowrisc_dv_alert_agent_0/seq_lib" "+incdir+src/lowrisc_dv_key_sideload_agent_0.1" "+incdir+src/lowrisc_dv_key_sideload_agent_0.1/seq_lib" "+incdir+src/lowrisc_dv_push_pull_agent_0.1" "+incdir+src/lowrisc_dv_push_pull_agent_0.1/seq_lib" "+incdir+src/lowrisc_dv_tl_agent_0" "+incdir+src/lowrisc_dv_tl_agent_0/seq_lib" "+incdir+src/lowrisc_dv_cip_lib_0" "+incdir+src/lowrisc_dv_cip_lib_0/seq_lib" "+incdir+src/lowrisc_dv_aes_model_dpi_0" "+incdir+src/lowrisc_dv_aes_env_0.1" "+incdir+src/lowrisc_dv_aes_env_0.1/seq_lib" "+incdir+src/lowrisc_dv_aes_test_0.1" "+define+EN_MASKING=0" "+define+SBOX_IMPL=aes_pkg::SBoxImplCanright" "+define+EN_GCM=0" -ccflags "-include /usr/include/openssl/bn.h -I/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_model_aes_1.0" -suppress 10717 -ccflags "-Wno-missing-declarations" -ccflags "-Wno-maybe-uninitialized" -ccflags "-Wno-return-type" -ccflags "-DQUESTA" /cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src/uvm_pkg.sv src/lowrisc_dv_pins_if_0/pins_if.sv src/lowrisc_dv_rst_shadowed_if_0/rst_shadowed_if.sv src/lowrisc_ip_jtag_pkg_0.1/rtl/jtag_pkg.sv src/lowrisc_model_aes_1.0/crypto.c src/lowrisc_model_aes_1.0/aes.c src/lowrisc_prim_cipher_pkg_0.1/rtl/prim_cipher_pkg.sv src/lowrisc_prim_generic_and2_0/rtl/prim_and2.sv src/lowrisc_prim_generic_buf_0/rtl/prim_buf.sv src/lowrisc_prim_generic_const_0/rtl/prim_const.sv src/lowrisc_prim_generic_const_sec_0/rtl/prim_const_sec.sv src/lowrisc_prim_generic_flop_0/rtl/prim_flop.sv src/lowrisc_prim_generic_flop_no_rst_0/rtl/prim_flop_no_rst.sv src/lowrisc_prim_generic_inv_0/rtl/prim_inv.sv src/lowrisc_prim_generic_xnor2_0/rtl/prim_xnor2.sv src/lowrisc_prim_generic_xor2_0/rtl/prim_xor2.sv src/lowrisc_prim_pad_wrapper_pkg_0/rtl/prim_pad_wrapper_pkg.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_pkg.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_22_16_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_22_16_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_28_22_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_28_22_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_39_32_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_39_32_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_64_57_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_64_57_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_72_64_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_72_64_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_137_128_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_137_128_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_22_16_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_22_16_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_39_32_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_39_32_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_72_64_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_72_64_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_76_68_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_76_68_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_137_128_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_hamming_137_128_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_22_16_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_22_16_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_28_22_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_28_22_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_39_32_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_39_32_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_64_57_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_64_57_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_72_64_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_72_64_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_137_128_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_137_128_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_22_16_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_22_16_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_39_32_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_39_32_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_72_64_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_72_64_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_76_68_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_76_68_enc.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_137_128_dec.sv src/lowrisc_prim_secded_0.1/rtl/prim_secded_inv_hamming_137_128_enc.sv src/lowrisc_prim_sha2_pkg_0/rtl/prim_sha2_pkg.sv src/lowrisc_dv_common_ifs_0/common_ifs_pkg.sv src/lowrisc_dv_common_ifs_0/clk_if.sv src/lowrisc_dv_common_ifs_0/clk_rst_if.sv src/lowrisc_dv_str_utils_0/str_utils_pkg.sv src/lowrisc_prim_blanker_0/rtl/prim_blanker.sv src/lowrisc_prim_cdc_rand_delay_0/rtl/prim_cdc_rand_delay.sv src/lowrisc_prim_cipher_0/rtl/prim_subst_perm.sv src/lowrisc_prim_cipher_0/rtl/prim_present.sv src/lowrisc_prim_cipher_0/rtl/prim_prince.sv src/lowrisc_prim_count_0/rtl/prim_count_pkg.sv src/lowrisc_prim_count_0/rtl/prim_count.sv src/lowrisc_prim_generic_clock_mux2_0/rtl/prim_clock_mux2.sv src/lowrisc_prim_generic_pad_wrapper_0/rtl/prim_pad_wrapper.sv src/lowrisc_prim_gf_mult_0/rtl/prim_gf_mult.sv src/lowrisc_prim_lfsr_0.1/rtl/prim_lfsr.sv src/lowrisc_prim_mubi_pkg_0.1/rtl/prim_mubi_pkg.sv src/lowrisc_prim_sec_anchor_0.1/rtl/prim_sec_anchor_buf.sv src/lowrisc_prim_sec_anchor_0.1/rtl/prim_sec_anchor_const.sv src/lowrisc_prim_sec_anchor_0.1/rtl/prim_sec_anchor_flop.sv src/lowrisc_prim_sha2_0/rtl/prim_sha2_pad.sv src/lowrisc_prim_sha2_0/rtl/prim_sha2.sv src/lowrisc_prim_sha2_0/rtl/prim_sha2_32.sv src/lowrisc_prim_sparse_fsm_0/rtl/prim_sparse_fsm_flop.sv src/lowrisc_prim_util_0.1/rtl/prim_util_pkg.sv src/lowrisc_darjeeling_constants_top_pkg_0/rtl/top_pkg.sv src/lowrisc_dv_dv_test_status_0/dv_test_status_pkg.sv src/lowrisc_ip_entropy_src_pkg_0.1/rtl/entropy_src_pkg.sv src/lowrisc_ip_lc_ctrl_state_pkg_0.1/rtl/lc_ctrl_state_pkg.sv src/lowrisc_prim_double_lfsr_0/rtl/prim_double_lfsr.sv src/lowrisc_prim_generic_clock_inv_0/rtl/prim_clock_inv.sv src/lowrisc_prim_generic_flop_2sync_0/rtl/prim_flop_2sync.sv src/lowrisc_prim_generic_flop_en_0/rtl/prim_flop_en.sv src/lowrisc_prim_leading_one_ppc_0/rtl/prim_leading_one_ppc.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi4_sender.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi4_sync.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi4_dec.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi8_sender.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi8_sync.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi8_dec.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi12_sender.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi12_sync.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi12_dec.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi16_sender.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi16_sync.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi16_dec.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi20_sender.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi20_sync.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi20_dec.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi24_sender.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi24_sync.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi24_dec.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi28_sender.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi28_sync.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi28_dec.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi32_sender.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi32_sync.sv src/lowrisc_prim_mubi_0.1/rtl/prim_mubi32_dec.sv src/lowrisc_prim_onehot_0/rtl/prim_onehot_enc.sv src/lowrisc_prim_onehot_0/rtl/prim_onehot_mux.sv src/lowrisc_prim_onehot_check_0/rtl/prim_onehot_check.sv src/lowrisc_prim_trivium_0.1/rtl/prim_trivium_pkg.sv src/lowrisc_prim_trivium_0.1/rtl/prim_trivium.sv src/lowrisc_opentitan_bus_params_pkg_0/bus_params_pkg.sv src/lowrisc_prim_arbiter_0/rtl/prim_arbiter_fixed.sv src/lowrisc_prim_arbiter_0/rtl/prim_arbiter_ppc.sv src/lowrisc_prim_arbiter_0/rtl/prim_arbiter_tree.sv src/lowrisc_prim_arbiter_0/rtl/prim_arbiter_tree_dup.sv src/lowrisc_prim_diff_decode_0/rtl/prim_diff_decode.sv src/lowrisc_prim_fifo_0/rtl/prim_fifo_async_sram_adapter.sv src/lowrisc_prim_fifo_0/rtl/prim_fifo_async_simple.sv src/lowrisc_prim_fifo_0/rtl/prim_fifo_async.sv src/lowrisc_prim_fifo_0/rtl/prim_fifo_sync.sv src/lowrisc_prim_fifo_0/rtl/prim_fifo_sync_cnt.sv src/lowrisc_prim_generic_rst_sync_0/rtl/prim_rst_sync.sv src/lowrisc_prim_reg_we_check_0/rtl/prim_reg_we_check.sv src/lowrisc_prim_subreg_0/rtl/prim_subreg_pkg.sv src/lowrisc_prim_subreg_0/rtl/prim_reg_cdc.sv src/lowrisc_prim_subreg_0/rtl/prim_reg_cdc_arb.sv src/lowrisc_prim_subreg_0/rtl/prim_subreg.sv src/lowrisc_prim_subreg_0/rtl/prim_subreg_arb.sv src/lowrisc_prim_subreg_0/rtl/prim_subreg_ext.sv src/lowrisc_prim_subreg_0/rtl/prim_subreg_shadow.sv src/lowrisc_tlul_headers_0.1/rtl/tlul_pkg.sv src/lowrisc_darjeeling_constants_top_racl_pkg_0.1/rtl/autogen/top_racl_pkg.sv src/lowrisc_dv_dv_utils_0/dv_utils_pkg.sv src/lowrisc_dv_mem_model_0/mem_model_pkg.sv src/lowrisc_ip_lc_ctrl_pkg_0.1/rtl/lc_ctrl_reg_pkg.sv src/lowrisc_ip_lc_ctrl_pkg_0.1/rtl/lc_ctrl_pkg.sv src/lowrisc_prim_esc_0/rtl/prim_esc_pkg.sv src/lowrisc_prim_esc_0/rtl/prim_esc_receiver.sv src/lowrisc_prim_esc_0/rtl/prim_esc_sender.sv src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_data_integ_enc.sv src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_data_integ_dec.sv src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_cmd_intg_gen.sv src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_cmd_intg_chk.sv src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_rsp_intg_gen.sv src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_rsp_intg_chk.sv src/lowrisc_dv_dv_base_agent_0/dv_base_agent_pkg.sv src/lowrisc_dv_dv_base_reg_0/dv_base_reg_pkg.sv src/lowrisc_ip_csrng_pkg_0.1/rtl/csrng_reg_pkg.sv src/lowrisc_ip_csrng_pkg_0.1/rtl/csrng_pkg.sv src/lowrisc_prim_alert_0/rtl/prim_alert_pkg.sv src/lowrisc_prim_alert_0/rtl/prim_alert_receiver.sv src/lowrisc_prim_alert_0/rtl/prim_alert_sender.sv src/lowrisc_prim_lc_sync_0.1/rtl/prim_lc_sync.sv src/lowrisc_tlul_common_0.1/rtl/tlul_fifo_sync.sv src/lowrisc_tlul_common_0.1/rtl/tlul_fifo_async.sv src/lowrisc_tlul_common_0.1/rtl/tlul_assert.sv src/lowrisc_tlul_common_0.1/rtl/tlul_err.sv src/lowrisc_tlul_common_0.1/rtl/tlul_assert_multiple.sv src/lowrisc_dv_csr_utils_0/csr_utils_pkg.sv src/lowrisc_dv_sec_cm_0/sec_cm_pkg.sv src/lowrisc_dv_sec_cm_0/prim_onehot_check_if.sv src/lowrisc_dv_sec_cm_0/prim_count_if.sv src/lowrisc_dv_sec_cm_0/prim_sparse_fsm_flop_if.sv src/lowrisc_dv_sec_cm_0/prim_double_lfsr_if.sv src/lowrisc_dv_sec_cm_0/prim_singleton_fifo_if.sv src/lowrisc_dv_sec_cm_0/sec_cm_prim_onehot_check_bind.sv src/lowrisc_dv_sec_cm_0/sec_cm_prim_count_bind.sv src/lowrisc_dv_sec_cm_0/sec_cm_prim_sparse_fsm_flop_bind.sv src/lowrisc_dv_sec_cm_0/sec_cm_prim_double_lfsr_bind.sv src/lowrisc_dv_sec_cm_0/sec_cm_prim_singleton_fifo_bind.sv src/lowrisc_ip_edn_pkg_0.1/rtl/edn_reg_pkg.sv src/lowrisc_ip_edn_pkg_0.1/rtl/edn_pkg.sv src/lowrisc_prim_all_0.1/rtl/prim_clock_gating_sync.sv src/lowrisc_prim_all_0.1/rtl/prim_hpc2.sv src/lowrisc_prim_all_0.1/rtl/prim_hpc3.sv src/lowrisc_prim_all_0.1/rtl/prim_sram_arbiter.sv src/lowrisc_prim_all_0.1/rtl/prim_slicer.sv src/lowrisc_prim_all_0.1/rtl/prim_sync_reqack.sv src/lowrisc_prim_all_0.1/rtl/prim_sync_reqack_data.sv src/lowrisc_prim_all_0.1/rtl/prim_sync_slow_fast.sv src/lowrisc_prim_all_0.1/rtl/prim_keccak.sv src/lowrisc_prim_all_0.1/rtl/prim_packer.sv src/lowrisc_prim_all_0.1/rtl/prim_packer_fifo.sv src/lowrisc_prim_all_0.1/rtl/prim_gate_gen.sv src/lowrisc_prim_all_0.1/rtl/prim_pulse_sync.sv src/lowrisc_prim_all_0.1/rtl/prim_filter.sv src/lowrisc_prim_all_0.1/rtl/prim_filter_ctr.sv src/lowrisc_prim_all_0.1/rtl/prim_flop_x.sv src/lowrisc_prim_all_0.1/rtl/prim_intr_hw.sv src/lowrisc_tlul_adapter_host_0.1/rtl/tlul_adapter_host.sv src/lowrisc_tlul_adapter_reg_0.1/rtl/tlul_adapter_reg.sv src/lowrisc_tlul_adapter_sram_0.1/rtl/tlul_sram_byte.sv src/lowrisc_tlul_adapter_sram_0.1/rtl/tlul_adapter_sram.sv src/lowrisc_tlul_lc_gate_0.1/rtl/tlul_lc_gate.sv src/lowrisc_tlul_request_loopback_0.1/rtl/tlul_request_loopback.sv src/lowrisc_tlul_socket_1n_0.1/rtl/tlul_err_resp.sv src/lowrisc_tlul_socket_1n_0.1/rtl/tlul_socket_1n.sv src/lowrisc_tlul_socket_m1_0.1/rtl/tlul_socket_m1.sv src/lowrisc_tlul_sram2tlul_0.1/rtl/sram2tlul.sv src/lowrisc_dv_dv_lib_0/dv_lib_pkg.sv src/lowrisc_ip_keymgr_dpe_pkg_0.1/rtl/keymgr_dpe_reg_pkg.sv src/lowrisc_ip_keymgr_dpe_pkg_0.1/rtl/keymgr_dpe_pkg.sv src/lowrisc_tlul_adapter_racl_0.1/rtl/tlul_adapter_racl.sv src/lowrisc_tlul_adapter_reg_racl_0.1/rtl/tlul_adapter_reg_racl.sv src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/debug_rom/debug_rom.sv src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/debug_rom/debug_rom_one_scratch.sv src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_pkg.sv src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_sba.sv src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_csrs.sv src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_mem.sv src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dmi_cdc.sv src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dmi_jtag.sv src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dmi_jtag_tap.sv src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_top.sv src/lowrisc_dv_alert_agent_0/alert_if.sv src/lowrisc_dv_alert_agent_0/alert_agent_pkg.sv src/lowrisc_dv_key_sideload_agent_0.1/key_sideload_if.sv src/lowrisc_dv_key_sideload_agent_0.1/key_sideload_agent_pkg.sv src/lowrisc_dv_push_pull_agent_0.1/push_pull_if.sv src/lowrisc_dv_push_pull_agent_0.1/push_pull_agent_pkg.sv src/lowrisc_dv_tl_agent_0/tl_if.sv src/lowrisc_dv_tl_agent_0/tl_agent_pkg.sv src/lowrisc_tlul_adapter_dmi_0.1/rtl/tlul_adapter_dmi.sv src/lowrisc_tlul_adapter_sram_racl_0.1/rtl/tlul_adapter_sram_racl.sv src/lowrisc_tlul_jtag_dtm_0.1/rtl/tlul_jtag_dtm.sv src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv src/lowrisc_dv_cip_lib_0/cip_mubi_cov_if.sv src/lowrisc_dv_cip_lib_0/cip_mubi_cov_wrapper.sv src/lowrisc_dv_cip_lib_0/cip_lc_tx_cov_if.sv src/lowrisc_ip_aes_1.0/rtl/aes_reg_pkg.sv src/lowrisc_ip_aes_1.0/rtl/aes_pkg.sv src/lowrisc_ip_aes_1.0/rtl/aes_reg_top.sv src/lowrisc_ip_aes_1.0/rtl/aes_ctrl_reg_shadowed.sv src/lowrisc_ip_aes_1.0/rtl/aes_ctrl_gcm_reg_shadowed.sv src/lowrisc_ip_aes_1.0/rtl/aes_core.sv src/lowrisc_ip_aes_1.0/rtl/aes_ctr.sv src/lowrisc_ip_aes_1.0/rtl/aes_ctr_fsm.sv src/lowrisc_ip_aes_1.0/rtl/aes_ctr_fsm_p.sv src/lowrisc_ip_aes_1.0/rtl/aes_ctr_fsm_n.sv src/lowrisc_ip_aes_1.0/rtl/aes_control.sv src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm.sv src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm_p.sv src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm_n.sv src/lowrisc_ip_aes_1.0/rtl/aes_reg_status.sv src/lowrisc_ip_aes_1.0/rtl/aes_sel_buf_chk.sv src/lowrisc_ip_aes_1.0/rtl/aes_cipher_core.sv src/lowrisc_ip_aes_1.0/rtl/aes_cipher_control.sv src/lowrisc_ip_aes_1.0/rtl/aes_cipher_control_fsm.sv src/lowrisc_ip_aes_1.0/rtl/aes_cipher_control_fsm_p.sv src/lowrisc_ip_aes_1.0/rtl/aes_cipher_control_fsm_n.sv src/lowrisc_ip_aes_1.0/rtl/aes_sub_bytes.sv src/lowrisc_ip_aes_1.0/rtl/aes_sbox.sv src/lowrisc_ip_aes_1.0/rtl/aes_sbox_lut.sv src/lowrisc_ip_aes_1.0/rtl/aes_sbox_canright_pkg.sv src/lowrisc_ip_aes_1.0/rtl/aes_sbox_canright.sv src/lowrisc_ip_aes_1.0/rtl/aes_sbox_canright_masked_noreuse.sv src/lowrisc_ip_aes_1.0/rtl/aes_sbox_canright_masked.sv src/lowrisc_ip_aes_1.0/rtl/aes_sbox_dom.sv src/lowrisc_ip_aes_1.0/rtl/aes_shift_rows.sv src/lowrisc_ip_aes_1.0/rtl/aes_mix_columns.sv src/lowrisc_ip_aes_1.0/rtl/aes_mix_single_column.sv src/lowrisc_ip_aes_1.0/rtl/aes_key_expand.sv src/lowrisc_ip_aes_1.0/rtl/aes_prng_clearing.sv src/lowrisc_ip_aes_1.0/rtl/aes_prng_masking.sv src/lowrisc_ip_aes_1.0/rtl/aes_ghash.sv src/lowrisc_ip_aes_1.0/rtl/aes.sv src/lowrisc_dv_aes_cov_0/aes_cov_if.sv src/lowrisc_dv_aes_cov_0/aes_cov_bind.sv src/lowrisc_dv_aes_model_dpi_0/aes_model_dpi.c src/lowrisc_dv_aes_model_dpi_0/aes_model_dpi_pkg.sv src/lowrisc_dv_aes_sva_0.1/aes_bind.sv src/lowrisc_dv_aes_sva_0.1/aes_idle_check.sv src/lowrisc_dv_aes_sva_0.1/aes_reseed_if.sv src/lowrisc_dv_aes_sva_0.1/aes_masking_reseed_if.sv src/lowrisc_fpv_aes_csr_assert_0/aes_csr_assert_fpv.sv src/lowrisc_dv_aes_test_vectors_0/nist_vectors_pkg.sv src/lowrisc_dv_aes_test_vectors_0/nist_vectors_gcm_pkg.sv src/lowrisc_dv_aes_ral_pkg_0/aes_ral_pkg.sv src/lowrisc_dv_aes_env_0.1/aes_env_pkg.sv src/lowrisc_dv_aes_err_injection_0.1/aes_err_injection_bind.sv src/lowrisc_dv_aes_err_injection_0.1/signal_force.sv src/lowrisc_dv_aes_err_injection_0.1/force_if.sv src/lowrisc_dv_aes_err_injection_0.1/fi_control_fsm_wrapper.sv src/lowrisc_dv_aes_err_injection_0.1/fi_control_if.sv src/lowrisc_dv_aes_err_injection_0.1/fi_cipher_fsm_wrapper.sv src/lowrisc_dv_aes_err_injection_0.1/fi_cipher_if.sv src/lowrisc_dv_aes_err_injection_0.1/fi_ctr_fsm_wrapper.sv src/lowrisc_dv_aes_err_injection_0.1/fi_ctr_fsm_if.sv src/lowrisc_dv_aes_err_injection_0.1/fi_core_wrapper.sv src/lowrisc_dv_aes_err_injection_0.1/fi_core_if.sv src/lowrisc_dv_aes_err_injection_0.1/fi_ghash_wrapper.sv src/lowrisc_dv_aes_err_injection_0.1/fi_ghash_if.sv src/lowrisc_dv_aes_test_0.1/aes_test_pkg.sv src/lowrisc_dv_aes_sim_0.1/tb/tb.sv -work /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/work "+incdir+/cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src" -statslog /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/stats_log -csession=incr -csessiondir /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/sessions 
+** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+-- Compiling package uvm_pkg (uvm-1.2 Built-in)
+-- Compiling interface pins_if
+-- Importing package uvm_pkg (uvm-1.2 Built-in)
+-- Compiling interface rst_shadowed_if
+-- Compiling package jtag_pkg
+-- Compiling package prim_cipher_pkg
+-- Compiling module prim_and2
+-- Compiling module prim_buf
+-- Compiling module prim_const
+-- Compiling module prim_const_sec
+-- Compiling module prim_flop
+-- Compiling module prim_flop_no_rst
+-- Compiling module prim_inv
+-- Compiling module prim_xnor2
+-- Compiling module prim_xor2
+-- Compiling package prim_pad_wrapper_pkg
+-- Compiling package prim_secded_pkg
+-- Compiling module prim_secded_22_16_dec
+-- Compiling module prim_secded_22_16_enc
+-- Compiling module prim_secded_28_22_dec
+-- Compiling module prim_secded_28_22_enc
+-- Compiling module prim_secded_39_32_dec
+-- Compiling module prim_secded_39_32_enc
+-- Compiling module prim_secded_64_57_dec
+-- Compiling module prim_secded_64_57_enc
+-- Compiling module prim_secded_72_64_dec
+-- Compiling module prim_secded_72_64_enc
+-- Compiling module prim_secded_137_128_dec
+-- Compiling module prim_secded_137_128_enc
+-- Compiling module prim_secded_hamming_22_16_dec
+-- Compiling module prim_secded_hamming_22_16_enc
+-- Compiling module prim_secded_hamming_39_32_dec
+-- Compiling module prim_secded_hamming_39_32_enc
+-- Compiling module prim_secded_hamming_72_64_dec
+-- Compiling module prim_secded_hamming_72_64_enc
+-- Compiling module prim_secded_hamming_76_68_dec
+-- Compiling module prim_secded_hamming_76_68_enc
+-- Compiling module prim_secded_hamming_137_128_dec
+-- Compiling module prim_secded_hamming_137_128_enc
+-- Compiling module prim_secded_inv_22_16_dec
+-- Compiling module prim_secded_inv_22_16_enc
+-- Compiling module prim_secded_inv_28_22_dec
+-- Compiling module prim_secded_inv_28_22_enc
+-- Compiling module prim_secded_inv_39_32_dec
+-- Compiling module prim_secded_inv_39_32_enc
+-- Compiling module prim_secded_inv_64_57_dec
+-- Compiling module prim_secded_inv_64_57_enc
+-- Compiling module prim_secded_inv_72_64_dec
+-- Compiling module prim_secded_inv_72_64_enc
+-- Compiling module prim_secded_inv_137_128_dec
+-- Compiling module prim_secded_inv_137_128_enc
+-- Compiling module prim_secded_inv_hamming_22_16_dec
+-- Compiling module prim_secded_inv_hamming_22_16_enc
+-- Compiling module prim_secded_inv_hamming_39_32_dec
+-- Compiling module prim_secded_inv_hamming_39_32_enc
+-- Compiling module prim_secded_inv_hamming_72_64_dec
+-- Compiling module prim_secded_inv_hamming_72_64_enc
+-- Compiling module prim_secded_inv_hamming_76_68_dec
+-- Compiling module prim_secded_inv_hamming_76_68_enc
+-- Compiling module prim_secded_inv_hamming_137_128_dec
+-- Compiling module prim_secded_inv_hamming_137_128_enc
+-- Compiling package prim_sha2_pkg
+-- Compiling package common_ifs_pkg
+-- Compiling interface clk_if
+-- Compiling interface clk_rst_if
+-- Importing package common_ifs_pkg
+-- Compiling package str_utils_pkg
+-- Compiling module prim_blanker
+-- Compiling module prim_cdc_rand_delay
+-- Compiling module prim_subst_perm
+-- Importing package prim_cipher_pkg
+-- Compiling module prim_present
+-- Compiling module prim_prince
+-- Compiling package prim_count_pkg
+-- Compiling module prim_count
+-- Importing package prim_count_pkg
+-- Compiling module prim_clock_mux2
+** Warning: (vlog-13361) src/lowrisc_prim_generic_clock_mux2_0/rtl/prim_clock_mux2.sv(27): No trigger event inferred in disable expression.
+** Warning: (vlog-13361) src/lowrisc_prim_generic_clock_mux2_0/rtl/prim_clock_mux2.sv(28): No trigger event inferred in disable expression.
+-- Compiling module prim_pad_wrapper
+-- Importing package prim_pad_wrapper_pkg
+** Warning: src/lowrisc_prim_generic_pad_wrapper_0/rtl/prim_pad_wrapper.sv(30): (vlog-13314) Defaulting port 'attr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module prim_gf_mult
+-- Compiling module prim_lfsr
+-- Compiling package prim_mubi_pkg
+-- Compiling module prim_sec_anchor_buf
+-- Compiling module prim_sec_anchor_const
+-- Compiling module prim_sec_anchor_flop
+-- Compiling module prim_sha2_pad
+-- Importing package prim_sha2_pkg
+** Warning: src/lowrisc_prim_sha2_0/rtl/prim_sha2_pad.sv(18): (vlog-13314) Defaulting port 'fifo_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module prim_sha2
+** Warning: src/lowrisc_prim_sha2_0/rtl/prim_sha2.sv(25): (vlog-13314) Defaulting port 'fifo_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_prim_sha2_0/rtl/prim_sha2.sv(41): (vlog-13314) Defaulting port 'digest_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module prim_sha2_32
+** Warning: src/lowrisc_prim_sha2_0/rtl/prim_sha2_32.sv(19): (vlog-13314) Defaulting port 'fifo_rdata_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_prim_sha2_0/rtl/prim_sha2_32.sv(31): (vlog-13314) Defaulting port 'digest_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module prim_sparse_fsm_flop
+-- Compiling package prim_util_pkg
+-- Compiling package top_pkg
+-- Importing package prim_util_pkg
+-- Compiling package dv_test_status_pkg
+-- Compiling package entropy_src_pkg
+-- Compiling package lc_ctrl_state_pkg
+-- Compiling module prim_double_lfsr
+-- Compiling module prim_clock_inv
+-- Compiling module prim_flop_2sync
+-- Compiling module prim_flop_en
+-- Compiling module prim_leading_one_ppc
+-- Compiling module prim_mubi4_sender
+-- Importing package prim_mubi_pkg
+-- Compiling module prim_mubi4_sync
+-- Compiling module prim_mubi4_dec
+-- Compiling module prim_mubi8_sender
+-- Compiling module prim_mubi8_sync
+-- Compiling module prim_mubi8_dec
+-- Compiling module prim_mubi12_sender
+-- Compiling module prim_mubi12_sync
+-- Compiling module prim_mubi12_dec
+-- Compiling module prim_mubi16_sender
+-- Compiling module prim_mubi16_sync
+-- Compiling module prim_mubi16_dec
+-- Compiling module prim_mubi20_sender
+-- Compiling module prim_mubi20_sync
+-- Compiling module prim_mubi20_dec
+-- Compiling module prim_mubi24_sender
+-- Compiling module prim_mubi24_sync
+-- Compiling module prim_mubi24_dec
+-- Compiling module prim_mubi28_sender
+-- Compiling module prim_mubi28_sync
+-- Compiling module prim_mubi28_dec
+-- Compiling module prim_mubi32_sender
+-- Compiling module prim_mubi32_sync
+-- Compiling module prim_mubi32_dec
+-- Compiling module prim_onehot_enc
+-- Compiling module prim_onehot_mux
+** Warning: src/lowrisc_prim_onehot_0/rtl/prim_onehot_mux.sv(18): (vlog-13314) Defaulting port 'in_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module prim_onehot_check
+-- Compiling package prim_trivium_pkg
+-- Compiling module prim_trivium
+-- Importing package prim_trivium_pkg
+-- Compiling package bus_params_pkg
+-- Importing package top_pkg
+-- Compiling module prim_arbiter_fixed
+-- Compiling module prim_arbiter_ppc
+-- Compiling module prim_arbiter_tree
+-- Compiling module prim_arbiter_tree_dup
+-- Compiling module prim_diff_decode
+-- Compiling module prim_fifo_async_sram_adapter
+-- Compiling module prim_fifo_async_simple
+-- Compiling module prim_fifo_async
+-- Compiling module prim_fifo_sync
+-- Compiling module prim_fifo_sync_cnt
+-- Compiling module prim_rst_sync
+-- Compiling module prim_reg_we_check
+-- Compiling package prim_subreg_pkg
+-- Compiling module prim_reg_cdc
+-- Compiling module prim_reg_cdc_arb
+-- Compiling module prim_subreg
+-- Importing package prim_subreg_pkg
+-- Compiling module prim_subreg_arb
+-- Compiling module prim_subreg_ext
+-- Compiling module prim_subreg_shadow
+-- Compiling package tlul_pkg
+-- Importing package prim_secded_pkg
+-- Compiling package top_racl_pkg
+-- Importing package tlul_pkg
+-- Compiling package dv_utils_pkg
+-- Importing package bus_params_pkg
+-- Importing package str_utils_pkg
+-- Importing package dv_test_status_pkg
+-- Compiling package mem_model_pkg
+-- Compiling package lc_ctrl_reg_pkg
+-- Compiling package lc_ctrl_pkg
+-- Importing package lc_ctrl_state_pkg
+-- Importing package lc_ctrl_reg_pkg
+-- Compiling package prim_esc_pkg
+-- Compiling module prim_esc_receiver
+-- Importing package prim_esc_pkg
+** Warning: src/lowrisc_prim_esc_0/rtl/prim_esc_receiver.sv(59): (vlog-13314) Defaulting port 'esc_tx_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module prim_esc_sender
+** Warning: src/lowrisc_prim_esc_0/rtl/prim_esc_sender.sv(40): (vlog-13314) Defaulting port 'esc_rx_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_data_integ_enc
+-- Compiling module tlul_data_integ_dec
+-- Compiling module tlul_cmd_intg_gen
+** Warning: src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_cmd_intg_gen.sv(15): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_cmd_intg_chk
+** Warning: src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_cmd_intg_chk.sv(13): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_rsp_intg_gen
+** Warning: src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_rsp_intg_gen.sv(31): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_rsp_intg_chk
+** Warning: src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_rsp_intg_chk.sv(15): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package dv_base_agent_pkg
+-- Importing package dv_utils_pkg
+-- Compiling package dv_base_reg_pkg
+-- Compiling package csrng_reg_pkg
+-- Compiling package csrng_pkg
+-- Importing package csrng_reg_pkg
+-- Importing package entropy_src_pkg
+-- Compiling package prim_alert_pkg
+-- Compiling module prim_alert_receiver
+-- Importing package prim_alert_pkg
+** Warning: src/lowrisc_prim_alert_0/rtl/prim_alert_receiver.sv(58): (vlog-13314) Defaulting port 'alert_tx_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module prim_alert_sender
+** Warning: src/lowrisc_prim_alert_0/rtl/prim_alert_sender.sv(65): (vlog-13314) Defaulting port 'alert_rx_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module prim_lc_sync
+-- Importing package lc_ctrl_pkg
+-- Compiling module tlul_fifo_sync
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_fifo_sync.sv(20): (vlog-13314) Defaulting port 'tl_h_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_fifo_sync.sv(23): (vlog-13314) Defaulting port 'tl_d_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_fifo_async
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_fifo_async.sv(19): (vlog-13314) Defaulting port 'tl_h_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_fifo_async.sv(22): (vlog-13314) Defaulting port 'tl_d_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_assert
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_assert.sv(17): (vlog-13314) Defaulting port 'h2d' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_assert.sv(18): (vlog-13314) Defaulting port 'd2h' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_err
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_err.sv(12): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_assert_multiple
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_assert_multiple.sv(15): (vlog-13314) Defaulting port 'h2d' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_assert_multiple.sv(16): (vlog-13314) Defaulting port 'd2h' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package csr_utils_pkg
+-- Importing package dv_base_reg_pkg
+-- Compiling package sec_cm_pkg
+-- Compiling interface prim_onehot_check_if
+-- Importing package sec_cm_pkg
+** Warning: ** while parsing macro expansion: 'DV_CHECK_STD_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_sec_cm_0/prim_onehot_check_if.sv(69)
+** at src/lowrisc_dv_sec_cm_0/prim_onehot_check_if.sv(69): (vlog-2643) Unterminated string literal continues onto next line.
+-- Compiling interface prim_count_if
+-- Compiling interface prim_sparse_fsm_flop_if
+** Warning: ** while parsing macro expansion: 'DV_CHECK_STD_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_sec_cm_0/prim_sparse_fsm_flop_if.sv(45)
+** at src/lowrisc_dv_sec_cm_0/prim_sparse_fsm_flop_if.sv(45): (vlog-2643) Unterminated string literal continues onto next line.
+-- Compiling interface prim_double_lfsr_if
+-- Compiling interface prim_singleton_fifo_if
+-- Compiling module sec_cm_prim_onehot_check_bind
+-- Compiling module sec_cm_prim_count_bind
+-- Compiling module sec_cm_prim_sparse_fsm_flop_bind
+-- Compiling module sec_cm_prim_double_lfsr_bind
+-- Compiling module sec_cm_prim_singleton_fifo_bind
+-- Compiling package edn_reg_pkg
+-- Compiling package edn_pkg
+-- Importing package csrng_pkg
+-- Compiling module prim_clock_gating_sync
+-- Compiling module prim_hpc2
+-- Compiling module prim_hpc3
+-- Compiling module prim_sram_arbiter
+-- Compiling module prim_slicer
+-- Compiling module prim_sync_reqack
+-- Compiling module prim_sync_reqack_data
+-- Compiling module prim_sync_slow_fast
+-- Compiling module prim_keccak
+-- Compiling module prim_packer
+-- Compiling module prim_packer_fifo
+-- Compiling module prim_gate_gen
+-- Compiling module prim_pulse_sync
+-- Compiling module prim_filter
+-- Compiling module prim_filter_ctr
+-- Compiling module prim_flop_x
+-- Compiling module prim_intr_hw
+-- Compiling module tlul_adapter_host
+** Warning: src/lowrisc_tlul_adapter_host_0.1/rtl/tlul_adapter_host.sv(52): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_adapter_reg
+** Warning: src/lowrisc_tlul_adapter_reg_0.1/rtl/tlul_adapter_reg.sv(111): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_sram_byte
+** Warning: src/lowrisc_tlul_adapter_sram_0.1/rtl/tlul_sram_byte.sv(27): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_adapter_sram_0.1/rtl/tlul_sram_byte.sv(31): (vlog-13314) Defaulting port 'tl_sram_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_adapter_sram
+** Warning: src/lowrisc_tlul_adapter_sram_0.1/rtl/tlul_adapter_sram.sv(50): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_lc_gate
+** Warning: src/lowrisc_tlul_lc_gate_0.1/rtl/tlul_lc_gate.sv(33): (vlog-13314) Defaulting port 'tl_h2d_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_lc_gate_0.1/rtl/tlul_lc_gate.sv(38): (vlog-13314) Defaulting port 'tl_d2h_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_request_loopback
+** Warning: src/lowrisc_tlul_request_loopback_0.1/rtl/tlul_request_loopback.sv(13): (vlog-13314) Defaulting port 'tl_h2d_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_request_loopback_0.1/rtl/tlul_request_loopback.sv(16): (vlog-13314) Defaulting port 'tl_d2h_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_err_resp
+** Warning: src/lowrisc_tlul_socket_1n_0.1/rtl/tlul_err_resp.sv(16): (vlog-13314) Defaulting port 'tl_h_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_socket_1n
+** Warning: src/lowrisc_tlul_socket_1n_0.1/rtl/tlul_socket_1n.sv(63): (vlog-13314) Defaulting port 'tl_h_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_socket_1n_0.1/rtl/tlul_socket_1n.sv(66): (vlog-13314) Defaulting port 'tl_d_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_socket_m1
+** Warning: src/lowrisc_tlul_socket_m1_0.1/rtl/tlul_socket_m1.sv(41): (vlog-13314) Defaulting port 'tl_h_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_socket_m1_0.1/rtl/tlul_socket_m1.sv(45): (vlog-13314) Defaulting port 'tl_d_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module sram2tlul
+** Warning: src/lowrisc_tlul_sram2tlul_0.1/rtl/sram2tlul.sv(21): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package dv_lib_pkg
+-- Importing package csr_utils_pkg
+-- Importing package dv_base_agent_pkg
+-- Compiling package keymgr_dpe_reg_pkg
+-- Compiling package keymgr_dpe_pkg
+-- Importing package keymgr_dpe_reg_pkg
+-- Compiling module tlul_adapter_racl
+** Warning: src/lowrisc_tlul_adapter_racl_0.1/rtl/tlul_adapter_racl.sv(25): (vlog-13314) Defaulting port 'tl_h2d_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_adapter_racl_0.1/rtl/tlul_adapter_racl.sv(28): (vlog-13314) Defaulting port 'tl_filtered_d2h_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Importing package top_racl_pkg
+** Warning: src/lowrisc_tlul_adapter_racl_0.1/rtl/tlul_adapter_racl.sv(30): (vlog-13314) Defaulting port 'racl_policies_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_adapter_racl_0.1/rtl/tlul_adapter_racl.sv(32): (vlog-13314) Defaulting port 'racl_policy_sel_ranges_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_adapter_reg_racl
+** Warning: src/lowrisc_tlul_adapter_reg_racl_0.1/rtl/tlul_adapter_reg_racl.sv(31): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_adapter_reg_racl_0.1/rtl/tlul_adapter_reg_racl.sv(39): (vlog-13314) Defaulting port 'racl_policies_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module debug_rom
+-- Compiling module debug_rom_one_scratch
+-- Compiling package dm
+-- Compiling module dm_sba
+-- Importing package dm
+-- Compiling module dm_csrs
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_csrs.sv(31): (vlog-13314) Defaulting port 'dmi_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_csrs.sv(42): (vlog-13314) Defaulting port 'hartinfo_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_csrs.sv(61): (vlog-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module dm_mem
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_mem.sv(41): (vlog-13314) Defaulting port 'progbuf_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_mem.sv(43): (vlog-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_mem.sv(48): (vlog-13314) Defaulting port 'cmd_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module dmi_cdc
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dmi_cdc.sv(27): (vlog-13314) Defaulting port 'jtag_dmi_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dmi_cdc.sv(47): (vlog-13314) Defaulting port 'core_dmi_resp_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module dmi_jtag
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dmi_jtag.sv(35): (vlog-13314) Defaulting port 'dmi_resp_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module dmi_jtag_tap
+-- Compiling module dm_top
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_top.sv(46): (vlog-13314) Defaulting port 'hartinfo_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/pulp-platform_riscv-dbg_0.1_0/pulp_riscv_dbg/src/dm_top.sv(73): (vlog-13314) Defaulting port 'dmi_req_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling interface alert_if
+-- Compiling package alert_agent_pkg
+-- Importing package dv_lib_pkg
+-- Compiling interface key_sideload_if
+-- Importing package keymgr_dpe_pkg
+-- Compiling package key_sideload_agent_pkg
+-- Compiling interface push_pull_if
+-- Compiling package push_pull_agent_pkg
+** Warning: ** while parsing file included at src/lowrisc_dv_push_pull_agent_0.1/push_pull_agent_pkg.sv(54)
+** while parsing file included at src/lowrisc_dv_push_pull_agent_0.1/seq_lib/push_pull_seq_list.sv(5)
+** while parsing macro expansion: 'DV_CHECK_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_push_pull_agent_0.1/seq_lib/push_pull_base_seq.sv(20)
+** at src/lowrisc_dv_push_pull_agent_0.1/seq_lib/push_pull_base_seq.sv(20): (vlog-2643) Unterminated string literal continues onto next line.
+-- Compiling interface tl_if
+-- Compiling package tl_agent_pkg
+-- Importing package mem_model_pkg
+** Warning: ** while parsing file included at src/lowrisc_dv_tl_agent_0/tl_agent_pkg.sv(78)
+** at src/lowrisc_dv_tl_agent_0/tl_seq_item.sv(190): (vlog-2619) Use of lifetime qualifier 'automatic' for task prototype 'get_written_data' is not LRM compliant.
+** Warning: ** while parsing file included at src/lowrisc_dv_tl_agent_0/tl_agent_pkg.sv(78)
+** while parsing macro expansion: 'DV_CHECK_FATAL' starting at src/lowrisc_dv_tl_agent_0/tl_seq_item.sv(420)
+** at src/lowrisc_dv_tl_agent_0/tl_seq_item.sv(420): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_tl_agent_0/tl_agent_pkg.sv(78)
+** while parsing macro expansion: 'DV_CHECK_FATAL' starting at src/lowrisc_dv_tl_agent_0/tl_seq_item.sv(435)
+** at src/lowrisc_dv_tl_agent_0/tl_seq_item.sv(435): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_tl_agent_0/tl_agent_pkg.sv(79)
+** while parsing macro expansion: 'DV_CHECK_STD_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_tl_agent_0/tl_agent_cfg.sv(193)
+** at src/lowrisc_dv_tl_agent_0/tl_agent_cfg.sv(193): (vlog-2643) Unterminated string literal continues onto next line.
+-- Compiling module tlul_adapter_dmi
+** Warning: src/lowrisc_tlul_adapter_dmi_0.1/rtl/tlul_adapter_dmi.sv(22): (vlog-13314) Defaulting port 'tl_h2d_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_adapter_dmi_0.1/rtl/tlul_adapter_dmi.sv(34): (vlog-13314) Defaulting port 'dmi_resp_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_adapter_sram_racl
+** Warning: src/lowrisc_tlul_adapter_sram_racl_0.1/rtl/tlul_adapter_sram_racl.sv(54): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_adapter_sram_racl_0.1/rtl/tlul_adapter_sram_racl.sv(79): (vlog-13314) Defaulting port 'racl_policies_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_adapter_sram_racl_0.1/rtl/tlul_adapter_sram_racl.sv(81): (vlog-13314) Defaulting port 'racl_policy_sel_ranges_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module tlul_jtag_dtm
+-- Importing package jtag_pkg
+** Warning: src/lowrisc_tlul_jtag_dtm_0.1/rtl/tlul_jtag_dtm.sv(19): (vlog-13314) Defaulting port 'jtag_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_jtag_dtm_0.1/rtl/tlul_jtag_dtm.sv(26): (vlog-13314) Defaulting port 'tl_d2h_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package cip_base_pkg
+-- Importing package tl_agent_pkg
+-- Importing package alert_agent_pkg
+-- Importing package push_pull_agent_pkg
+** Warning: ** while parsing macro expansion: '_DV_MUBI_RAND_VAL' starting at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(101)
+** at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(101): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing macro expansion: '_DV_MUBI_RAND_VAL' starting at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(104)
+** at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(104): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing macro expansion: '_DV_MUBI_RAND_VAL' starting at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(107)
+** at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(107): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing macro expansion: '_DV_MUBI_RAND_VAL' starting at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(110)
+** at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(110): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing macro expansion: 'DV_CHECK_STD_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(118)
+** at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(118): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(133)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_seq_list.sv(13)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(78)
+** while parsing macro expansion: 'DV_CHECK_STD_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__tl_errors.svh(55)
+** at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__tl_errors.svh(55): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(133)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_seq_list.sv(13)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(78)
+** while parsing macro expansion: 'create_tl_access_error_case' starting at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__tl_errors.svh(91)
+** at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__tl_errors.svh(91): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(133)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_seq_list.sv(13)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(78)
+** while parsing macro expansion: 'create_tl_access_error_case' starting at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__tl_errors.svh(155)
+** at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__tl_errors.svh(155): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(133)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_seq_list.sv(13)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(78)
+** while parsing macro expansion: 'create_tl_access_error_case' starting at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__tl_errors.svh(195)
+** at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__tl_errors.svh(195): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(133)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_seq_list.sv(13)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(78)
+** while parsing macro expansion: 'create_tl_access_error_case' starting at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__tl_errors.svh(234)
+** at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__tl_errors.svh(234): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(133)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_seq_list.sv(13)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(79)
+** while parsing macro expansion: 'DV_CHECK_STD_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__shadow_reg_errors.svh(290)
+** at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq__shadow_reg_errors.svh(290): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(133)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_seq_list.sv(13)
+** while parsing macro expansion: 'DV_CHECK_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(620)
+** at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(620): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(133)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_seq_list.sv(13)
+** while parsing macro expansion: 'DV_CHECK_STD_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(1480)
+** at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(1480): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(133)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_seq_list.sv(13)
+** while parsing macro expansion: 'downcast' starting at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(1485)
+** at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(1485): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_cip_lib_0/cip_base_pkg.sv(133)
+** while parsing file included at src/lowrisc_dv_cip_lib_0/seq_lib/cip_seq_list.sv(13)
+** while parsing macro expansion: 'DV_CHECK_STD_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(1557)
+** at src/lowrisc_dv_cip_lib_0/seq_lib/cip_base_vseq.sv(1557): (vlog-2643) Unterminated string literal continues onto next line.
+-- Compiling interface cip_mubi_cov_if
+-- Compiling module cip_mubi_cov_wrapper
+-- Compiling interface cip_lc_tx_cov_if
+-- Compiling package aes_reg_pkg
+-- Compiling package aes_pkg
+-- Importing package aes_reg_pkg
+-- Compiling module aes_reg_top
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_reg_top.sv(13): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_reg_top.sv(17): (vlog-13314) Defaulting port 'hw2reg' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_ctrl_reg_shadowed
+-- Importing package aes_pkg
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_ctrl_reg_shadowed.sv(42): (vlog-13314) Defaulting port 'reg2hw_ctrl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_ctrl_gcm_reg_shadowed
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_ctrl_gcm_reg_shadowed.sv(39): (vlog-13314) Defaulting port 'reg2hw_ctrl_gcm_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_core
+-- Importing package edn_pkg
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_core.sv(43): (vlog-13314) Defaulting port 'keymgr_key_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_core.sv(56): (vlog-13314) Defaulting port 'reg2hw' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_ctr
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_ctr.sv(20): (vlog-13314) Defaulting port 'ctr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_ctr_fsm
+-- Compiling module aes_ctr_fsm_p
+-- Compiling module aes_ctr_fsm_n
+-- Compiling module aes_control
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control.sv(52): (vlog-13314) Defaulting port 'key_init_qe_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control.sv(73): (vlog-13314) Defaulting port 'ctr_we_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_control_fsm
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm.sv(52): (vlog-13314) Defaulting port 'key_init_qe_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_control_fsm_p
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm_p.sv(53): (vlog-13314) Defaulting port 'key_init_qe_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_control_fsm_n
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm_n.sv(57): (vlog-13314) Defaulting port 'key_init_qe_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_reg_status
+-- Compiling module aes_sel_buf_chk
+-- Compiling module aes_cipher_core
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_cipher_core.sv(139): (vlog-13314) Defaulting port 'prd_clearing_state_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_cipher_core.sv(140): (vlog-13314) Defaulting port 'prd_clearing_key_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_cipher_core.sv(150): (vlog-13314) Defaulting port 'state_init_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_cipher_core.sv(151): (vlog-13314) Defaulting port 'key_init_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_cipher_control
+-- Compiling module aes_cipher_control_fsm
+-- Compiling module aes_cipher_control_fsm_p
+-- Compiling module aes_cipher_control_fsm_n
+-- Compiling module aes_sub_bytes
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_sub_bytes.sv(17): (vlog-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_sub_bytes.sv(18): (vlog-13314) Defaulting port 'mask_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_sub_bytes.sv(19): (vlog-13314) Defaulting port 'prd_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_sbox
+-- Compiling module aes_sbox_lut
+-- Compiling package aes_sbox_canright_pkg
+-- Compiling module aes_sbox_canright
+-- Importing package aes_sbox_canright_pkg
+-- Compiling module aes_masked_inverse_gf2p4_noreuse
+-- Compiling module aes_masked_inverse_gf2p8_noreuse
+-- Compiling module aes_sbox_canright_masked_noreuse
+-- Compiling module aes_masked_inverse_gf2p4
+-- Compiling module aes_masked_inverse_gf2p8
+-- Compiling module aes_sbox_canright_masked
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_sbox_dom.sv(803): (vlog-13314) Defaulting port 'prd_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_shift_rows.sv(9): (vlog-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_mix_columns.sv(9): (vlog-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_mix_single_column.sv(12): (vlog-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_key_expand.sv(28): (vlog-13314) Defaulting port 'key_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_ghash.sv(121): (vlog-13314) Defaulting port 'data_out_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_ghash.sv(122): (vlog-13314) Defaulting port 'cipher_state_done_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(60): (vlog-13314) Defaulting port 'edn_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(63): (vlog-13314) Defaulting port 'keymgr_key_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(66): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(70): (vlog-13314) Defaulting port 'alert_rx_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_dv_aes_sva_0.1/aes_idle_check.sv(12): (vlog-13314) Defaulting port 'reg2hw' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_fpv_aes_csr_assert_0/aes_csr_assert_fpv.sv(25): (vlog-13314) Defaulting port 'h2d' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_fpv_aes_csr_assert_0/aes_csr_assert_fpv.sv(26): (vlog-13314) Defaulting port 'd2h' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_dv_aes_test_vectors_0/nist_vectors_gcm_pkg.sv(256): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: ** while parsing file included at src/lowrisc_dv_aes_env_0.1/aes_env_pkg.sv(119)
+** while parsing file included at src/lowrisc_dv_aes_env_0.1/seq_lib/aes_vseq_list.sv(5)
+** while parsing macro expansion: 'DV_CHECK_FATAL' starting at src/lowrisc_dv_aes_env_0.1/seq_lib/aes_base_vseq.sv(474)
+** at src/lowrisc_dv_aes_env_0.1/seq_lib/aes_base_vseq.sv(474): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_aes_env_0.1/aes_env_pkg.sv(119)
+** while parsing file included at src/lowrisc_dv_aes_env_0.1/seq_lib/aes_vseq_list.sv(5)
+** while parsing macro expansion: 'DV_CHECK_FATAL' starting at src/lowrisc_dv_aes_env_0.1/seq_lib/aes_base_vseq.sv(499)
+** at src/lowrisc_dv_aes_env_0.1/seq_lib/aes_base_vseq.sv(499): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: ** while parsing file included at src/lowrisc_dv_aes_env_0.1/aes_env_pkg.sv(119)
+** while parsing file included at src/lowrisc_dv_aes_env_0.1/seq_lib/aes_vseq_list.sv(5)
+** while parsing macro expansion: 'DV_CHECK_RANDOMIZE_WITH_FATAL' starting at src/lowrisc_dv_aes_env_0.1/seq_lib/aes_base_vseq.sv(551)
+** at src/lowrisc_dv_aes_env_0.1/seq_lib/aes_base_vseq.sv(551): (vlog-2643) Unterminated string literal continues onto next line.
+-- Compiling package uvm_pkg_sv_unit
+-- Compiling module aes_dom_indep_mul_gf2pn
+-- Importing package aes_sbox_canright_pkg
+-- Importing package uvm_pkg (uvm-1.2 Built-in)
+-- Compiling module aes_dom_dep_mul_gf2pn_unopt
+-- Compiling module aes_dom_dep_mul_gf2pn
+-- Compiling module aes_dom_inverse_gf2p4
+-- Compiling module aes_dom_inverse_gf2p8
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_sbox_dom.sv(803): (vlog-13314) Defaulting port 'prd_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_sbox_dom
+-- Importing package aes_pkg
+-- Importing package aes_reg_pkg
+-- Importing package prim_util_pkg
+-- Compiling module aes_shift_rows
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_shift_rows.sv(9): (vlog-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_mix_columns
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_mix_columns.sv(9): (vlog-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_mix_single_column
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_mix_single_column.sv(12): (vlog-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_key_expand
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_key_expand.sv(28): (vlog-13314) Defaulting port 'key_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes_prng_clearing
+-- Importing package edn_pkg
+-- Importing package entropy_src_pkg
+-- Importing package csrng_pkg
+-- Importing package csrng_reg_pkg
+-- Compiling module aes_prng_masking
+-- Importing package prim_trivium_pkg
+-- Compiling module aes_ghash
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_ghash.sv(121): (vlog-13314) Defaulting port 'data_out_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_ghash.sv(122): (vlog-13314) Defaulting port 'cipher_state_done_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module aes
+-- Importing package prim_mubi_pkg
+-- Importing package lc_ctrl_pkg
+-- Importing package lc_ctrl_state_pkg
+-- Importing package lc_ctrl_reg_pkg
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(60): (vlog-13314) Defaulting port 'edn_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Importing package keymgr_dpe_pkg
+-- Importing package keymgr_dpe_reg_pkg
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(63): (vlog-13314) Defaulting port 'keymgr_key_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Importing package tlul_pkg
+-- Importing package top_pkg
+-- Importing package prim_secded_pkg
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(66): (vlog-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Importing package prim_alert_pkg
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(70): (vlog-13314) Defaulting port 'alert_rx_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling interface aes_cov_if
+-- Importing package dv_utils_pkg
+-- Importing package bus_params_pkg
+-- Importing package str_utils_pkg
+-- Importing package dv_test_status_pkg
+-- Compiling module aes_cov_bind
+-- Compiling package aes_model_dpi_pkg
+-- Compiling module aes_bind
+-- Compiling module aes_idle_check
+** Warning: src/lowrisc_dv_aes_sva_0.1/aes_idle_check.sv(12): (vlog-13314) Defaulting port 'reg2hw' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling interface aes_reseed_if
+-- Compiling interface aes_masking_reseed_if
+-- Compiling module aes_csr_assert_fpv
+** Warning: src/lowrisc_fpv_aes_csr_assert_0/aes_csr_assert_fpv.sv(25): (vlog-13314) Defaulting port 'h2d' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_fpv_aes_csr_assert_0/aes_csr_assert_fpv.sv(26): (vlog-13314) Defaulting port 'd2h' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling package nist_vectors_pkg
+-- Compiling package nist_vectors_gcm_pkg
+** Warning: src/lowrisc_dv_aes_test_vectors_0/nist_vectors_gcm_pkg.sv(256): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+-- Compiling package aes_ral_pkg
+-- Importing package dv_base_reg_pkg
+-- Compiling package aes_env_pkg
+-- Importing package csr_utils_pkg
+-- Importing package tl_agent_pkg
+-- Importing package mem_model_pkg
+-- Importing package dv_base_agent_pkg
+-- Importing package dv_lib_pkg
+-- Importing package cip_base_pkg
+-- Importing package alert_agent_pkg
+-- Importing package push_pull_agent_pkg
+-- Importing package sec_cm_pkg
+-- Importing package aes_ral_pkg
+-- Importing package key_sideload_agent_pkg
+-- Importing package aes_model_dpi_pkg
+-- Importing package nist_vectors_pkg
+-- Importing package nist_vectors_gcm_pkg
+-- Compiling module aes_err_injection_bind
+-- Importing package aes_env_pkg
+-- Compiling module signal_force
+-- Compiling interface force_if
+-- Compiling module fi_control_fsm_wrapper
+-- Compiling interface fi_control_if
+-- Compiling module fi_cipher_fsm_wrapper
+-- Compiling interface fi_cipher_if
+-- Compiling module fi_ctr_fsm_wrapper
+-- Compiling interface fi_ctr_fsm_if
+-- Compiling module fi_core_wrapper
+-- Compiling interface fi_core_if
+-- Compiling module fi_ghash_wrapper
+-- Compiling interface fi_ghash_if
+-- Compiling package aes_test_pkg
+-- Compiling module tb
+-- Importing package aes_test_pkg
+
+Top level modules:
+	prim_const
+	prim_flop_no_rst
+	prim_secded_22_16_dec
+	prim_secded_22_16_enc
+	prim_secded_28_22_dec
+	prim_secded_28_22_enc
+	prim_secded_39_32_dec
+	prim_secded_39_32_enc
+	prim_secded_64_57_dec
+	prim_secded_64_57_enc
+	prim_secded_72_64_dec
+	prim_secded_72_64_enc
+	prim_secded_137_128_dec
+	prim_secded_137_128_enc
+	prim_secded_hamming_22_16_dec
+	prim_secded_hamming_22_16_enc
+	prim_secded_hamming_39_32_dec
+	prim_secded_hamming_39_32_enc
+	prim_secded_hamming_72_64_dec
+	prim_secded_hamming_72_64_enc
+	prim_secded_hamming_76_68_dec
+	prim_secded_hamming_76_68_enc
+	prim_secded_hamming_137_128_dec
+	prim_secded_hamming_137_128_enc
+	prim_secded_inv_22_16_dec
+	prim_secded_inv_22_16_enc
+	prim_secded_inv_28_22_dec
+	prim_secded_inv_28_22_enc
+	prim_secded_inv_72_64_dec
+	prim_secded_inv_72_64_enc
+	prim_secded_inv_137_128_dec
+	prim_secded_inv_137_128_enc
+	prim_secded_inv_hamming_22_16_dec
+	prim_secded_inv_hamming_22_16_enc
+	prim_secded_inv_hamming_39_32_dec
+	prim_secded_inv_hamming_39_32_enc
+	prim_secded_inv_hamming_72_64_dec
+	prim_secded_inv_hamming_72_64_enc
+	prim_secded_inv_hamming_76_68_dec
+	prim_secded_inv_hamming_76_68_enc
+	prim_secded_inv_hamming_137_128_dec
+	prim_secded_inv_hamming_137_128_enc
+	prim_subst_perm
+	prim_present
+	prim_prince
+	prim_pad_wrapper
+	prim_sec_anchor_const
+	prim_sha2_32
+	prim_double_lfsr
+	prim_mubi4_sender
+	prim_mubi4_sync
+	prim_mubi8_sender
+	prim_mubi8_sync
+	prim_mubi8_dec
+	prim_mubi12_sender
+	prim_mubi12_sync
+	prim_mubi12_dec
+	prim_mubi16_sender
+	prim_mubi16_sync
+	prim_mubi16_dec
+	prim_mubi20_sender
+	prim_mubi20_sync
+	prim_mubi20_dec
+	prim_mubi24_sender
+	prim_mubi24_sync
+	prim_mubi24_dec
+	prim_mubi28_sender
+	prim_mubi28_sync
+	prim_mubi28_dec
+	prim_mubi32_sender
+	prim_mubi32_sync
+	prim_mubi32_dec
+	prim_arbiter_tree_dup
+	prim_fifo_async_sram_adapter
+	prim_rst_sync
+	prim_reg_cdc
+	prim_esc_receiver
+	prim_esc_sender
+	prim_alert_receiver
+	tlul_fifo_async
+	tlul_assert_multiple
+	sec_cm_prim_onehot_check_bind
+	sec_cm_prim_count_bind
+	sec_cm_prim_sparse_fsm_flop_bind
+	sec_cm_prim_double_lfsr_bind
+	sec_cm_prim_singleton_fifo_bind
+	prim_clock_gating_sync
+	prim_hpc2
+	prim_hpc3
+	prim_sram_arbiter
+	prim_slicer
+	prim_sync_slow_fast
+	prim_keccak
+	prim_packer
+	prim_gate_gen
+	prim_filter
+	prim_filter_ctr
+	prim_intr_hw
+	tlul_lc_gate
+	tlul_socket_m1
+	sram2tlul
+	tlul_adapter_reg_racl
+	dm_top
+	tlul_adapter_dmi
+	tlul_adapter_sram_racl
+	tlul_jtag_dtm
+	cip_mubi_cov_wrapper
+	aes_dom_dep_mul_gf2pn_unopt
+	aes_cov_bind
+	aes_bind
+	aes_err_injection_bind
+	tb
+-- Compiling DPI/PLI C file src/lowrisc_dv_aes_model_dpi_0/aes_model_dpi.c
+-- Compiling DPI/PLI C file src/lowrisc_model_aes_1.0/aes.c
+-- Compiling DPI/PLI C file src/lowrisc_model_aes_1.0/crypto.c
+End time: 14:43:09 on Oct 29,2026, Elapsed time: 0:00:04
+Errors: 0, Warnings: 139
+QuestaSim-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+Start time: 14:43:10 on Oct 29,2026
+vopt -timescale 1ns/1ps -mfcu "+acc=nr" aes_bind aes_cov_bind sec_cm_prim_sparse_fsm_flop_bind sec_cm_prim_onehot_check_bind aes_err_injection_bind tb -suppress 10717 -work /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/work -statslog /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/stats_log -csession=incr -csessiondir /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/sessions -o qrun_opt -csessionid=3 
+** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+
+Top level modules:
+	aes_bind
+	aes_cov_bind
+	sec_cm_prim_sparse_fsm_flop_bind
+	sec_cm_prim_onehot_check_bind
+	aes_err_injection_bind
+	tb
+
+Analyzing design...
+-- Loading module aes_bind
+-- Loading module aes_cov_bind
+-- Importing package prim_mubi_pkg
+-- Loading module sec_cm_prim_sparse_fsm_flop_bind
+-- Loading module sec_cm_prim_onehot_check_bind
+-- Loading module aes_err_injection_bind
+-- Importing package aes_env_pkg
+-- Importing package uvm_pkg (uvm-1.2 Built-in)
+-- Importing package top_pkg
+-- Importing package prim_util_pkg
+-- Importing package dv_utils_pkg
+-- Importing package bus_params_pkg
+-- Importing package str_utils_pkg
+-- Importing package dv_test_status_pkg
+-- Importing package csr_utils_pkg
+-- Importing package dv_base_reg_pkg
+-- Importing package tl_agent_pkg
+-- Importing package tlul_pkg
+-- Importing package prim_secded_pkg
+-- Importing package mem_model_pkg
+-- Importing package dv_base_agent_pkg
+-- Importing package dv_lib_pkg
+-- Importing package cip_base_pkg
+-- Importing package alert_agent_pkg
+-- Importing package prim_alert_pkg
+-- Importing package push_pull_agent_pkg
+-- Importing package sec_cm_pkg
+-- Importing package lc_ctrl_pkg
+-- Importing package lc_ctrl_state_pkg
+-- Importing package lc_ctrl_reg_pkg
+-- Importing package aes_reg_pkg
+-- Importing package aes_ral_pkg
+-- Importing package aes_pkg
+-- Importing package key_sideload_agent_pkg
+-- Importing package keymgr_dpe_pkg
+-- Importing package keymgr_dpe_reg_pkg
+-- Importing package aes_model_dpi_pkg
+-- Importing package nist_vectors_pkg
+-- Importing package nist_vectors_gcm_pkg
+-- Loading module tb
+-- Importing package aes_test_pkg
+-- Loading interface pins_if
+-- Loading interface clk_rst_if
+-- Importing package common_ifs_pkg
+-- Loading interface tl_if
+-- Loading interface alert_if
+-- Loading interface push_pull_if
+-- Loading interface rst_shadowed_if
+-- Loading interface key_sideload_if
+-- Loading interface aes_reseed_if
+-- Importing package edn_pkg
+-- Importing package entropy_src_pkg
+-- Importing package csrng_pkg
+-- Importing package csrng_reg_pkg
+-- Loading interface aes_masking_reseed_if
+-- Importing package prim_trivium_pkg
+-- Loading interface force_if
+-- Loading interface fi_control_if
+-- Loading interface fi_cipher_if
+-- Loading interface fi_ctr_fsm_if
+-- Loading interface fi_ghash_if
+-- Loading interface fi_core_if
+-- Loading interface aes_cov_if
+-- Loading module aes
+-- Loading module aes_reg_top
+-- Importing package prim_subreg_pkg
+-- Loading module tlul_cmd_intg_chk
+-- Loading module prim_secded_inv_64_57_dec
+-- Loading module tlul_data_integ_dec
+-- Loading module prim_secded_inv_39_32_dec
+-- Loading module prim_reg_we_check
+-- Loading module prim_buf
+-- Loading module prim_onehot_check
+-- Loading module tlul_rsp_intg_gen
+-- Loading module tlul_adapter_reg
+-- Loading module tlul_err
+-- Loading module prim_subreg_ext
+-- Loading module prim_subreg
+-- Loading module prim_subreg_arb
+-- Loading module prim_flop
+-- Loading module prim_subreg_shadow
+-- Loading module prim_lc_sync
+-- Loading module prim_sync_reqack_data
+-- Loading module prim_sync_reqack
+** Warning: (vopt-13361) src/lowrisc_prim_all_0.1/rtl/prim_sync_reqack.sv(402): No trigger event inferred in disable expression.
+** Warning: (vopt-13361) src/lowrisc_prim_all_0.1/rtl/prim_sync_reqack.sv(405): No trigger event inferred in disable expression.
+-- Loading module aes_core
+-- Loading module aes_prng_clearing
+-- Loading module prim_lfsr
+-- Importing package prim_cipher_pkg
+-- Loading module prim_sec_anchor_buf
+-- Loading module aes_ctr
+-- Loading module aes_sel_buf_chk
+-- Loading module aes_cipher_core
+-- Loading module aes_sub_bytes
+-- Loading module aes_key_expand
+-- Loading module aes_cipher_control
+-- Loading module aes_ctrl_reg_shadowed
+-- Loading module aes_ctrl_gcm_reg_shadowed
+-- Loading module aes_control
+-- Loading module prim_secded_inv_64_57_enc
+-- Loading module tlul_data_integ_enc
+-- Loading module prim_secded_inv_39_32_enc
+-- Loading module prim_flop_2sync
+-- Loading module prim_cdc_rand_delay
+-- Loading module aes_ctr_fsm_p
+-- Loading module aes_ctr_fsm
+-- Loading module prim_sparse_fsm_flop
+-- Loading module aes_ctr_fsm_n
+-- Loading module aes_sbox
+-- Loading module aes_shift_rows
+-- Loading module aes_mix_columns
+-- Loading module aes_cipher_control_fsm_p
+-- Loading module aes_cipher_control_fsm
+-- Loading module aes_cipher_control_fsm_n
+-- Loading module aes_control_fsm_p
+-- Loading module aes_control_fsm
+-- Loading module aes_reg_status
+-- Loading module aes_control_fsm_n
+-- Loading module prim_alert_sender
+-- Loading module prim_diff_decode
+-- Loading module prim_sec_anchor_flop
+-- Loading module aes_sbox_canright
+-- Importing package aes_sbox_canright_pkg
+-- Loading module aes_mix_single_column
+-- Loading interface cip_lc_tx_cov_if
+-- Loading module tlul_assert
+-- Loading module aes_csr_assert_fpv
+-- Loading module aes_idle_check
+-- Loading interface prim_onehot_check_if
+-- Loading module fi_core_wrapper
+-- Loading module signal_force
+-- Loading module fi_ctr_fsm_wrapper
+-- Loading interface prim_sparse_fsm_flop_if
+-- Loading module fi_cipher_fsm_wrapper
+-- Loading module fi_control_fsm_wrapper
+Optimizing 224 design-units (inlining 0/605 module instances):
+-- Optimizing interface fi_ghash_if(fast)
+-- Optimizing interface fi_ctr_fsm_if(fast)
+-- Optimizing interface fi_cipher_if(fast)
+-- Optimizing interface fi_control_if(fast)
+-- Optimizing interface force_if(fast)
+-- Optimizing interface aes_masking_reseed_if(fast)
+-- Optimizing interface aes_reseed_if(fast)
+-- Optimizing interface key_sideload_if(fast)
+-- Optimizing interface rst_shadowed_if(fast)
+-- Optimizing interface push_pull_if(fast)
+-- Optimizing interface alert_if(fast)
+-- Optimizing interface tl_if(fast)
+-- Optimizing interface clk_rst_if(fast)
+-- Optimizing interface pins_if(fast)
+-- Optimizing package dv_base_reg_pkg(fast)
+-- Optimizing package csr_utils_pkg(fast)
+-- Optimizing package dv_lib_pkg(fast)
+-- Optimizing package aes_ral_pkg(fast)
+-- Optimizing module prim_onehot_check(fast)
+-- Optimizing module prim_lfsr(fast)
+-- Optimizing module aes_reg_top(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_reg_top.sv(13): (vopt-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_reg_top.sv(17): (vopt-13314) Defaulting port 'hw2reg' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_control(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control.sv(52): (vopt-13314) Defaulting port 'key_init_qe_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control.sv(73): (vopt-13314) Defaulting port 'ctr_we_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing package prim_secded_pkg(fast)
+-- Optimizing package tl_agent_pkg(fast)
+-- Optimizing package alert_agent_pkg(fast)
+-- Optimizing interface aes_cov_if(fast__2)
+-- Optimizing module prim_secded_inv_39_32_dec(fast)
+-- Optimizing package dv_utils_pkg(fast)
+-- Optimizing package prim_mubi_pkg(fast)
+-- Optimizing package lc_ctrl_state_pkg(fast)
+-- Optimizing package key_sideload_agent_pkg(fast)
+-- Optimizing package nist_vectors_gcm_pkg(fast)
+-- Optimizing package aes_test_pkg(fast)
+-- Optimizing module aes_core(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_core.sv(43): (vopt-13314) Defaulting port 'keymgr_key_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_core.sv(56): (vopt-13314) Defaulting port 'reg2hw' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module prim_diff_decode(fast)
+-- Optimizing module aes_control_fsm(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm.sv(52): (vopt-13314) Defaulting port 'key_init_qe_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_control_fsm(fast__1)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm.sv(52): (vopt-13314) Defaulting port 'key_init_qe_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module prim_alert_sender(fast__1)
+** Warning: src/lowrisc_prim_alert_0/rtl/prim_alert_sender.sv(65): (vopt-13314) Defaulting port 'alert_rx_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module prim_alert_sender(fast)
+** Warning: src/lowrisc_prim_alert_0/rtl/prim_alert_sender.sv(65): (vopt-13314) Defaulting port 'alert_rx_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing interface prim_onehot_check_if(fast__1)
+-- Optimizing module aes_cipher_core(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_cipher_core.sv(139): (vopt-13314) Defaulting port 'prd_clearing_state_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_cipher_core.sv(140): (vopt-13314) Defaulting port 'prd_clearing_key_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_cipher_core.sv(150): (vopt-13314) Defaulting port 'state_init_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_cipher_core.sv(151): (vopt-13314) Defaulting port 'key_init_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(60): (vopt-13314) Defaulting port 'edn_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(63): (vopt-13314) Defaulting port 'keymgr_key_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(66): (vopt-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes.sv(70): (vopt-13314) Defaulting port 'alert_rx_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_key_expand(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_key_expand.sv(28): (vopt-13314) Defaulting port 'key_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing interface push_pull_if(fast__2)
+-- Optimizing module aes_cipher_control(fast)
+-- Optimizing interface fi_cipher_if(fast__2)
+-- Optimizing interface fi_control_if(fast__2)
+-- Optimizing module aes_prng_clearing(fast)
+-- Optimizing package dv_base_agent_pkg(fast)
+-- Optimizing package cip_base_pkg(fast)
+-- Optimizing module tlul_assert(fast)
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_assert.sv(17): (vopt-13314) Defaulting port 'h2d' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_assert.sv(18): (vopt-13314) Defaulting port 'd2h' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing package uvm_pkg (uvm-1.2 Built-in)(fast)
+-- Optimizing package uvm_pkg_sv_unit(fast)
+-- Optimizing package top_pkg(fast)
+-- Optimizing package bus_params_pkg(fast)
+-- Optimizing package common_ifs_pkg(fast)
+-- Optimizing package prim_alert_pkg(fast)
+-- Optimizing package prim_subreg_pkg(fast)
+-- Optimizing module prim_flop(fast)
+-- Optimizing module prim_flop(fast__1)
+-- Optimizing module prim_flop(fast__2)
+-- Optimizing module prim_flop(fast__3)
+-- Optimizing module prim_flop(fast__4)
+-- Optimizing module prim_flop(fast__5)
+-- Optimizing module prim_flop(fast__6)
+-- Optimizing module fi_core_wrapper(fast)
+-- Optimizing interface rst_shadowed_if(fast__2)
+-- Optimizing module prim_sec_anchor_flop(fast)
+-- Optimizing module prim_buf(fast)
+-- Optimizing module prim_buf(fast__1)
+-- Optimizing module prim_buf(fast__2)
+-- Optimizing module prim_buf(fast__3)
+-- Optimizing module prim_buf(fast__4)
+-- Optimizing module prim_buf(fast__5)
+-- Optimizing module prim_buf(fast__6)
+-- Optimizing module prim_buf(fast__7)
+-- Optimizing module prim_buf(fast__8)
+-- Optimizing module prim_buf(fast__9)
+-- Optimizing module prim_buf(fast__10)
+-- Optimizing module prim_buf(fast__11)
+-- Optimizing module prim_buf(fast__12)
+-- Optimizing module aes_err_injection_bind(fast)
+-- Optimizing module prim_sec_anchor_buf(fast)
+-- Optimizing module prim_sec_anchor_buf(fast__1)
+-- Optimizing module prim_sec_anchor_buf(fast__2)
+-- Optimizing module prim_sec_anchor_buf(fast__3)
+-- Optimizing module prim_sec_anchor_buf(fast__4)
+-- Optimizing module prim_sec_anchor_buf(fast__5)
+-- Optimizing module prim_sec_anchor_buf(fast__6)
+-- Optimizing module aes_bind(fast)
+-- Optimizing module tlul_data_integ_dec(fast)
+-- Optimizing module tlul_data_integ_enc(fast)
+-- Optimizing module aes_cov_bind(fast)
+-- Optimizing module sec_cm_prim_onehot_check_bind(fast)
+-- Optimizing module sec_cm_prim_sparse_fsm_flop_bind(fast)
+-- Optimizing interface prim_sparse_fsm_flop_if(fast)
+-- Optimizing interface prim_onehot_check_if(fast)
+-- Optimizing interface cip_lc_tx_cov_if(fast)
+-- Optimizing interface aes_cov_if(fast)
+-- Optimizing interface fi_core_if(fast)
+-- Optimizing package push_pull_agent_pkg(fast)
+-- Optimizing package aes_env_pkg(fast)
+-- Optimizing package str_utils_pkg(fast)
+-- Optimizing package mem_model_pkg(fast)
+-- Optimizing package lc_ctrl_pkg(fast)
+-- Optimizing package aes_reg_pkg(fast)
+-- Optimizing package aes_pkg(fast)
+-- Optimizing package keymgr_dpe_reg_pkg(fast)
+-- Optimizing package nist_vectors_pkg(fast)
+-- Optimizing package csrng_reg_pkg(fast)
+-- Optimizing package prim_cipher_pkg(fast)
+-- Optimizing module aes_cipher_control_fsm(fast)
+-- Optimizing module aes_sub_bytes(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_sub_bytes.sv(17): (vopt-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_sub_bytes.sv(18): (vopt-13314) Defaulting port 'mask_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_sub_bytes.sv(19): (vopt-13314) Defaulting port 'prd_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing interface clk_rst_if(fast__2)
+-- Optimizing interface clk_rst_if(fast__3)
+-- Optimizing module prim_sync_reqack(fast)
+-- Optimizing module aes_control_fsm_n(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm_n.sv(57): (vopt-13314) Defaulting port 'key_init_qe_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing interface fi_ctr_fsm_if(fast__2)
+-- Optimizing module aes_control_fsm_p(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm_p.sv(53): (vopt-13314) Defaulting port 'key_init_qe_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_control_fsm_p(fast__1)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_control_fsm_p.sv(53): (vopt-13314) Defaulting port 'key_init_qe_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing interface alert_if(fast__2)
+-- Optimizing interface fi_core_if(fast__2)
+-- Optimizing module aes_csr_assert_fpv(fast)
+** Warning: src/lowrisc_fpv_aes_csr_assert_0/aes_csr_assert_fpv.sv(25): (vopt-13314) Defaulting port 'h2d' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: src/lowrisc_fpv_aes_csr_assert_0/aes_csr_assert_fpv.sv(26): (vopt-13314) Defaulting port 'd2h' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing interface prim_sparse_fsm_flop_if(fast__1)
+-- Optimizing interface prim_sparse_fsm_flop_if(fast__2)
+-- Optimizing interface prim_sparse_fsm_flop_if(fast__3)
+-- Optimizing module prim_subreg_arb(fast__4)
+-- Optimizing module prim_subreg_arb(fast)
+-- Optimizing module prim_subreg_arb(fast__1)
+-- Optimizing module prim_subreg_arb(fast__2)
+-- Optimizing module prim_subreg_arb(fast__3)
+-- Optimizing module prim_subreg_arb(fast__5)
+-- Optimizing module prim_subreg_arb(fast__6)
+-- Optimizing module prim_subreg_arb(fast__7)
+-- Optimizing module tlul_adapter_reg(fast)
+** Warning: src/lowrisc_tlul_adapter_reg_0.1/rtl/tlul_adapter_reg.sv(111): (vopt-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module prim_subreg_shadow(fast)
+-- Optimizing module prim_secded_inv_64_57_dec(fast)
+-- Optimizing package prim_util_pkg(fast)
+-- Optimizing package dv_test_status_pkg(fast)
+-- Optimizing package aes_model_dpi_pkg(fast)
+-- Optimizing package entropy_src_pkg(fast)
+-- Optimizing package csrng_pkg(fast)
+-- Optimizing package edn_pkg(fast)
+-- Optimizing interface force_if(fast__5)
+-- Optimizing interface force_if(fast__6)
+-- Optimizing module aes_ctr_fsm_n(fast)
+-- Optimizing module aes_reg_status(fast)
+-- Optimizing module aes_reg_status(fast__1)
+-- Optimizing module prim_sparse_fsm_flop(fast)
+-- Optimizing module prim_sparse_fsm_flop(fast__1)
+-- Optimizing module prim_sparse_fsm_flop(fast__2)
+-- Optimizing module aes_ctr_fsm_p(fast)
+-- Optimizing module prim_subreg(fast)
+-- Optimizing module prim_subreg(fast__1)
+-- Optimizing module prim_subreg(fast__2)
+-- Optimizing module prim_subreg(fast__3)
+-- Optimizing module prim_subreg(fast__4)
+-- Optimizing module prim_subreg(fast__5)
+-- Optimizing module prim_subreg(fast__6)
+-- Optimizing module prim_subreg(fast__7)
+-- Optimizing module prim_subreg(fast__8)
+-- Optimizing module prim_subreg(fast__9)
+-- Optimizing module tlul_cmd_intg_chk(fast)
+** Warning: src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_cmd_intg_chk.sv(13): (vopt-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_shift_rows(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_shift_rows.sv(9): (vopt-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_mix_columns(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_mix_columns.sv(9): (vopt-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_idle_check(fast)
+** Warning: src/lowrisc_dv_aes_sva_0.1/aes_idle_check.sv(12): (vopt-13314) Defaulting port 'reg2hw' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing interface key_sideload_if(fast__2)
+-- Optimizing module prim_secded_inv_64_57_enc(fast)
+-- Optimizing module prim_secded_inv_39_32_enc(fast)
+-- Optimizing module prim_flop_2sync(fast)
+-- Optimizing module prim_flop_2sync(fast__1)
+-- Optimizing module prim_flop_2sync(fast__2)
+-- Optimizing module prim_subreg_ext(fast)
+-- Optimizing module prim_subreg_ext(fast__1)
+-- Optimizing module prim_subreg_ext(fast__2)
+-- Optimizing module prim_subreg_ext(fast__3)
+-- Optimizing module prim_subreg_ext(fast__4)
+-- Optimizing module prim_subreg_ext(fast__5)
+-- Optimizing module fi_ctr_fsm_wrapper(fast)
+-- Optimizing module fi_cipher_fsm_wrapper(fast)
+-- Optimizing module fi_control_fsm_wrapper(fast)
+-- Optimizing interface cip_lc_tx_cov_if(fast__1)
+-- Optimizing module prim_reg_we_check(fast)
+-- Optimizing package tlul_pkg(fast)
+-- Optimizing package sec_cm_pkg(fast)
+-- Optimizing package lc_ctrl_reg_pkg(fast)
+-- Optimizing package keymgr_dpe_pkg(fast)
+-- Optimizing package prim_trivium_pkg(fast)
+-- Optimizing package aes_sbox_canright_pkg(fast)
+-- Optimizing module prim_subreg_shadow(fast__1)
+-- Optimizing module prim_subreg_shadow(fast__2)
+-- Optimizing module prim_subreg_shadow(fast__3)
+-- Optimizing module prim_subreg_shadow(fast__4)
+-- Optimizing module prim_subreg_shadow(fast__5)
+-- Optimizing module prim_sync_reqack_data(fast)
+-- Optimizing module aes_ctrl_reg_shadowed(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_ctrl_reg_shadowed.sv(42): (vopt-13314) Defaulting port 'reg2hw_ctrl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_cipher_control_fsm_n(fast)
+-- Optimizing module tb(fast)
+-- Optimizing module aes_sel_buf_chk(fast)
+-- Optimizing module aes_sel_buf_chk(fast__1)
+-- Optimizing module aes_sel_buf_chk(fast__2)
+-- Optimizing module aes_sel_buf_chk(fast__3)
+-- Optimizing module aes_sel_buf_chk(fast__4)
+-- Optimizing module aes_ctrl_gcm_reg_shadowed(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_ctrl_gcm_reg_shadowed.sv(39): (vopt-13314) Defaulting port 'reg2hw_ctrl_gcm_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_ctr(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_ctr.sv(20): (vopt-13314) Defaulting port 'ctr_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_cipher_control_fsm_p(fast)
+-- Optimizing interface pins_if(fast__4)
+-- Optimizing module prim_lc_sync(fast)
+-- Optimizing module tlul_rsp_intg_gen(fast)
+** Warning: src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_rsp_intg_gen.sv(31): (vopt-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_sbox(fast)
+-- Optimizing module tlul_err(fast)
+** Warning: src/lowrisc_tlul_common_0.1/rtl/tlul_err.sv(12): (vopt-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_mix_single_column(fast)
+** Warning: src/lowrisc_ip_aes_1.0/rtl/aes_mix_single_column.sv(12): (vopt-13314) Defaulting port 'data_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module tlul_rsp_intg_gen(fast__1)
+** Warning: src/lowrisc_tlul_trans_intg_0.1/rtl/tlul_rsp_intg_gen.sv(31): (vopt-13314) Defaulting port 'tl_i' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Optimizing module aes_ctr_fsm(fast)
+-- Optimizing interface tl_if(fast__2)
+-- Optimizing interface pins_if(fast__5)
+-- Optimizing module aes_sbox_canright(fast)
+-- Optimizing interface aes_reseed_if(fast__2)
+-- Optimizing module prim_cdc_rand_delay(fast)
+-- Optimizing module prim_cdc_rand_delay(fast__1)
+-- Optimizing module signal_force(fast)
+-- Optimizing module signal_force(fast__1)
+-- Optimizing module signal_force(fast__2)
+-- Optimizing interface force_if(fast__4)
+Optimized design name is qrun_opt
+End time: 14:43:15 on Oct 29,2026, Elapsed time: 0:00:05
+Errors: 0, Warnings: 44, Suppressed Errors: 1
+End time: 14:43:15 on Oct 29,2026, Elapsed time: 0:00:10
+*** Summary *********************************************
+    qrun: Errors:   0, Warnings:   0
+    vlog: Errors:   0, Warnings: 139
+    vopt: Errors:   0, Warnings:  44
+  Totals: Errors:   0, Warnings: 183
+
+[make]: post_build
+
+[make]: build_result

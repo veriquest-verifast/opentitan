@@ -1,0 +1,6 @@
+  CREATE_STREAM @0 ps {NAME:aes_nist_vectors_vseq T:Transactions SCOPE:uvm_test_top.env.virtual_sequencer STREAM:3061}
+  CREATE_STREAM @0 ps {NAME:<unknown> T:Transactions SCOPE:uvm_test_top.env.m_edn_pull_agent[0].sequencer STREAM:3082}
+  CREATE_STREAM @0 ps {NAME:ping_seq T:Transactions SCOPE:uvm_test_top.env.m_alert_agent_recov_ctrl_update_err.sequencer STREAM:3106}
+  CREATE_STREAM @0 ps {NAME:alert_receiver_alert_rsp_seq T:Transactions SCOPE:uvm_test_top.env.m_alert_agent_recov_ctrl_update_err.sequencer STREAM:3109}
+  CREATE_STREAM @0 ps {NAME:ping_seq T:Transactions SCOPE:uvm_test_top.env.m_alert_agent_fatal_fault.sequencer STREAM:3132}
+  CREATE_STREAM @0 ps {NAME:alert_receiver_alert_rsp_seq T:Transactions SCOPE:uvm_test_top.env.m_alert_agent_fatal_fault.sequencer STREAM:3135}

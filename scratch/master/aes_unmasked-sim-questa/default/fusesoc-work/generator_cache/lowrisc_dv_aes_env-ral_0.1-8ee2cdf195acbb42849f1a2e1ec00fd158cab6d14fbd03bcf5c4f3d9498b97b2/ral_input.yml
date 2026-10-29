@@ -1,0 +1,6 @@
+files_root: /home/kthakkar/opentitan_new/opentitan/hw/ip/aes/dv/env
+gapi: '1.0'
+parameters:
+  name: aes
+  ip_hjson: ../../data/aes.hjson
+vlnv: lowrisc:dv:aes_env-ral:0.1

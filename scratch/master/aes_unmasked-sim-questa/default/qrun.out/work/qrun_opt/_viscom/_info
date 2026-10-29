@@ -1,0 +1,5 @@
+__design_bin_path=/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work
+incr_run_version=16384
+incr_partial_run_stats=0:0
+incr_no_change_stats=0:0
+opt_data_elab=/home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/work/qrun_opt
